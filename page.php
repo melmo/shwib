@@ -1,17 +1,12 @@
 <?php
 /**
- * Index Template
+ * Page Template
  *
- * This is the index template.  Technically, it is the "posts page" template.  It is used when a visitor is on
- * the page assigned to show a site's latest blog posts or on a category/tag/archive/taxonomy page if a more
- * specific template is not available.
+ * This is the default page template. 
  *
  */
-get_header(); ?>
-<?php if (!is_singular() ){ get_template_part( 'loop-meta' ); }  ?>
+    get_header(); ?>
         <div class="container">
-            
-            
             
             <div class="content">
 
@@ -26,8 +21,8 @@ get_header(); ?>
                             <?php echo apply_atomic_shortcode( 'byline', '<div class="byline">' . __( 'By [entry-author] on [entry-published]', 'shwib' ) . '</div>' ); ?>
 
                             <div class="entry-content">
-                                <?php the_post_thumbnail(); ?>
-                                <?php the_excerpt(); ?>
+
+                                <?php the_content(); ?>
                                 <?php wp_link_pages( array( 'before' => '<p class="page-links">' . __( 'Pages:', 'shwib' ), 'after' => '</p>' ) ); ?>
 
                             </div><!-- .entry-content -->
@@ -35,8 +30,6 @@ get_header(); ?>
                             <?php echo apply_atomic_shortcode( 'entry_meta', '<div class="entry-meta">' . __( '[entry-terms taxonomy="category" before="Posted in "] [entry-terms taxonomy="post_tag" before="| Tagged "]', 'shwib' ) . '</div>' ); ?>
 
                         </div>
-
-                    <?php get_template_part( 'loop-nav' ); ?>
 
                     <?php endwhile; ?>
 
@@ -47,6 +40,6 @@ get_header(); ?>
                 <?php endif; ?>
 
             </div> <!--content-->
-            <?php get_template_part( 'sidebar-posts' ); ?>
+            <?php get_template_part( 'sidebar-pages' ); ?>
         </div> <!-- /container -->
 <?php get_footer(); ?>

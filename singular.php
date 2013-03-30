@@ -1,17 +1,13 @@
 <?php
 /**
- * Index Template
+ * Singular Template
  *
- * This is the index template.  Technically, it is the "posts page" template.  It is used when a visitor is on
- * the page assigned to show a site's latest blog posts or on a category/tag/archive/taxonomy page if a more
- * specific template is not available.
+ * This is the default singular template.  It is used when a more specific template can't be found to display
+ * singular views of posts (any post type).
  *
  */
-get_header(); ?>
-<?php if (!is_singular() ){ get_template_part( 'loop-meta' ); }  ?>
+    get_header(); ?>
         <div class="container">
-            
-            
             
             <div class="content">
 
@@ -26,8 +22,8 @@ get_header(); ?>
                             <?php echo apply_atomic_shortcode( 'byline', '<div class="byline">' . __( 'By [entry-author] on [entry-published]', 'shwib' ) . '</div>' ); ?>
 
                             <div class="entry-content">
-                                <?php the_post_thumbnail(); ?>
-                                <?php the_excerpt(); ?>
+
+                                <?php the_content(); ?>
                                 <?php wp_link_pages( array( 'before' => '<p class="page-links">' . __( 'Pages:', 'shwib' ), 'after' => '</p>' ) ); ?>
 
                             </div><!-- .entry-content -->
@@ -36,7 +32,11 @@ get_header(); ?>
 
                         </div>
 
-                    <?php get_template_part( 'loop-nav' ); ?>
+                        <?php get_template_part( 'loop-nav' ); ?>
+
+                        <?php get_template_part( 'sidebar-after-singular' ); ?>
+
+                        <?php comments_template( '/comments.php', true ); // Loads the comments.php template. ?>
 
                     <?php endwhile; ?>
 
@@ -47,6 +47,7 @@ get_header(); ?>
                 <?php endif; ?>
 
             </div> <!--content-->
+
             <?php get_template_part( 'sidebar-posts' ); ?>
         </div> <!-- /container -->
 <?php get_footer(); ?>

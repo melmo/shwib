@@ -56,6 +56,10 @@ function shwib_add_scripts() {
        get_template_directory_uri() . '/_/js/vendor/bootstrap.min.js',
        array("jquery"),
        '1.0', true );
+   	wp_enqueue_script('cycle',
+       get_template_directory_uri() . '/_/js/vendor/jquery.cycle.all.js',
+       array("jquery"),
+       '2.9999.81', true );
    	wp_enqueue_script('main',
        get_template_directory_uri() . '/_/js/main.js',
        array("bootstrap"),

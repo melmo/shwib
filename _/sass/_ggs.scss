@@ -34,7 +34,7 @@ img {
 *  Simple elastic gutters
 *  Note: box-sizing will not work in IE6-7
 */
-.column {
+@mixin column {
   padding: 0 0.75em;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;

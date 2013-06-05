@@ -53,9 +53,9 @@ if ( post_password_required() || ( !have_comments() && !comments_open() && !ping
 			<?php endif; ?>
 
 		</div><!-- #comments -->
-
-		<?php comment_form(); // Loads the comment form. ?>
-
+		<div class="pure-form pure-form-stacked">
+			<?php comment_form(); // Loads the comment form. ?>
+		</div>
 	</div><!-- .comments-wrap -->
 
 </div><!-- #comments-template -->

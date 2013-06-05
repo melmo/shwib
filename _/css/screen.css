@@ -1345,15 +1345,6 @@ img {
 *  Simple elastic gutters
 *  Note: box-sizing will not work in IE6-7
 */
-/* line 37, ../sass/_ggs.scss */
-.column {
-  padding: 0 0.75em;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  float: left;
-}
-
 /* line 46, ../sass/_ggs.scss */
 h1, h2 {
   margin: 0.9230769230769231em 0 1.3846153846153846em;
@@ -1390,18 +1381,1459 @@ h3 {
   margin: 1.1428571428571428em 0 0.5714285714285714em;
 }
 
+/* line 10, ../sass/bootstrap/_navbar.scss */
+.navbar {
+  overflow: visible;
+  margin-bottom: 1.5em;
+  *position: relative;
+  *z-index: 2;
+}
+
+/* line 21, ../sass/bootstrap/_navbar.scss */
+.navbar-inner {
+  min-height: 2.5em;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #f9f9f9;
+  background-image: -moz-linear-gradient(top, white, #f2f2f2);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#f2f2f2));
+  background-image: -webkit-linear-gradient(top, white, #f2f2f2);
+  background-image: -o-linear-gradient(top, white, #f2f2f2);
+  background-image: linear-gradient(to bottom, #ffffff, #f2f2f2);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFF2F2F2', GradientType=0);
+  border: 1px solid #d4d4d4;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+  *zoom: 1;
+}
+/* line 15, ../sass/bootstrap/_mixins.scss */
+.navbar-inner:before, .navbar-inner:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+/* line 22, ../sass/bootstrap/_mixins.scss */
+.navbar-inner:after {
+  clear: both;
+}
+
+/* line 36, ../sass/bootstrap/_navbar.scss */
+.navbar .container {
+  width: auto;
+}
+
+/* line 41, ../sass/bootstrap/_navbar.scss */
+.nav-collapse.collapse {
+  height: auto;
+  overflow: visible;
+}
+
+/* line 49, ../sass/bootstrap/_navbar.scss */
+.navbar .brand {
+  float: left;
+  display: block;
+  padding: 0.5em 20px 0.5em;
+  margin-left: -20px;
+  font-size: 20px;
+  font-weight: 200;
+  color: #777777;
+  text-shadow: 0 1px 0 white;
+}
+/* line 60, ../sass/bootstrap/_navbar.scss */
+.navbar .brand:hover, .navbar .brand:focus {
+  text-decoration: none;
+}
+
+/* line 67, ../sass/bootstrap/_navbar.scss */
+.navbar-text {
+  margin-bottom: 0;
+  line-height: 2.5em;
+  color: #777777;
+}
+
+/* line 75, ../sass/bootstrap/_navbar.scss */
+.navbar-link {
+  color: #777777;
+}
+/* line 78, ../sass/bootstrap/_navbar.scss */
+.navbar-link:hover, .navbar-link:focus {
+  color: #333333;
+}
+
+/* line 85, ../sass/bootstrap/_navbar.scss */
+.navbar .divider-vertical {
+  height: 2.5em;
+  margin: 0 9px;
+  border-left: 1px solid #f2f2f2;
+  border-right: 1px solid white;
+}
+
+/* line 95, ../sass/bootstrap/_navbar.scss */
+.navbar .btn,
+.navbar .btn-group {
+  margin-top: 0.5em;
+}
+
+/* line 102, ../sass/bootstrap/_navbar.scss */
+.navbar .btn-group .btn,
+.navbar .input-prepend .btn,
+.navbar .input-append .btn,
+.navbar .input-prepend .btn-group,
+.navbar .input-append .btn-group {
+  margin-top: 0;
+}
+
+/* line 108, ../sass/bootstrap/_navbar.scss */
+.navbar-form {
+  margin-bottom: 0;
+  *zoom: 1;
+}
+/* line 15, ../sass/bootstrap/_mixins.scss */
+.navbar-form:before, .navbar-form:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+/* line 22, ../sass/bootstrap/_mixins.scss */
+.navbar-form:after {
+  clear: both;
+}
+/* line 114, ../sass/bootstrap/_navbar.scss */
+.navbar-form input,
+.navbar-form select,
+.navbar-form .radio,
+.navbar-form .checkbox {
+  margin-top: 0.5em;
+}
+/* line 119, ../sass/bootstrap/_navbar.scss */
+.navbar-form input,
+.navbar-form select,
+.navbar-form .btn {
+  display: inline-block;
+  margin-bottom: 0;
+}
+/* line 125, ../sass/bootstrap/_navbar.scss */
+.navbar-form input[type="image"],
+.navbar-form input[type="checkbox"],
+.navbar-form input[type="radio"] {
+  margin-top: 3px;
+}
+/* line 129, ../sass/bootstrap/_navbar.scss */
+.navbar-form .input-append,
+.navbar-form .input-prepend {
+  margin-top: 5px;
+  white-space: nowrap;
+}
+/* line 132, ../sass/bootstrap/_navbar.scss */
+.navbar-form .input-append input,
+.navbar-form .input-prepend input {
+  margin-top: 0;
+}
+
+/* line 140, ../sass/bootstrap/_navbar.scss */
+.navbar-search {
+  position: relative;
+  float: left;
+  margin-top: 0.5em;
+  margin-bottom: 0;
+}
+/* line 145, ../sass/bootstrap/_navbar.scss */
+.navbar-search .search-query {
+  margin-bottom: 0;
+  padding: 4px 14px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+
+/* line 158, ../sass/bootstrap/_navbar.scss */
+.navbar-static-top {
+  position: static;
+  margin-bottom: 0;
+}
+/* line 161, ../sass/bootstrap/_navbar.scss */
+.navbar-static-top .navbar-inner {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+/* line 173, ../sass/bootstrap/_navbar.scss */
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  margin-bottom: 0;
+}
+
+/* line 181, ../sass/bootstrap/_navbar.scss */
+.navbar-fixed-top .navbar-inner,
+.navbar-static-top .navbar-inner {
+  border-width: 0 0 1px;
+}
+
+/* line 184, ../sass/bootstrap/_navbar.scss */
+.navbar-fixed-bottom .navbar-inner {
+  border-width: 1px 0 0;
+}
+
+/* line 188, ../sass/bootstrap/_navbar.scss */
+.navbar-fixed-top .navbar-inner,
+.navbar-fixed-bottom .navbar-inner {
+  padding-left: 0;
+  padding-right: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+/* line 198, ../sass/bootstrap/_navbar.scss */
+.navbar-static-top .container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {
+  width: 940px;
+}
+
+/* line 203, ../sass/bootstrap/_navbar.scss */
+.navbar-fixed-top {
+  top: 0;
+}
+
+/* line 208, ../sass/bootstrap/_navbar.scss */
+.navbar-fixed-top .navbar-inner,
+.navbar-static-top .navbar-inner {
+  -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* line 214, ../sass/bootstrap/_navbar.scss */
+.navbar-fixed-bottom {
+  bottom: 0;
+}
+/* line 216, ../sass/bootstrap/_navbar.scss */
+.navbar-fixed-bottom .navbar-inner {
+  -webkit-box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* line 226, ../sass/bootstrap/_navbar.scss */
+.navbar .nav {
+  position: relative;
+  left: 0;
+  display: block;
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+/* line 233, ../sass/bootstrap/_navbar.scss */
+.navbar .nav.pull-right {
+  float: right;
+  margin-right: 0;
+}
+
+/* line 237, ../sass/bootstrap/_navbar.scss */
+.navbar .nav > li {
+  float: left;
+}
+
+/* line 242, ../sass/bootstrap/_navbar.scss */
+.navbar .nav > li > a {
+  float: none;
+  padding: 0.5em 15px 0.5em;
+  color: #777777;
+  text-decoration: none;
+  text-shadow: 0 1px 0 white;
+}
+
+/* line 250, ../sass/bootstrap/_navbar.scss */
+.navbar .nav .dropdown-toggle .caret {
+  margin-top: 8px;
+}
+
+/* line 256, ../sass/bootstrap/_navbar.scss */
+.navbar .nav > li > a:focus,
+.navbar .nav > li > a:hover {
+  background-color: transparent;
+  color: #333333;
+  text-decoration: none;
+}
+
+/* line 265, ../sass/bootstrap/_navbar.scss */
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {
+  color: #555555;
+  text-decoration: none;
+  background-color: #e6e6e6;
+  -webkit-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
+  -moz-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
+}
+
+/* line 274, ../sass/bootstrap/_navbar.scss */
+.navbar .btn-navbar {
+  display: none;
+  float: right;
+  padding: 7px 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: white;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #ededed;
+  background-image: -moz-linear-gradient(top, #f2f2f2, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f2f2f2), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #f2f2f2, #e6e6e6);
+  background-image: -o-linear-gradient(top, #f2f2f2, #e6e6e6);
+  background-image: linear-gradient(to bottom, #f2f2f2, #e6e6e6);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF2F2F2', endColorstr='#FFE6E6E6', GradientType=0);
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #e6e6e6;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.075);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.075);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.075);
+}
+/* line 502, ../sass/bootstrap/_mixins.scss */
+.navbar .btn-navbar:hover, .navbar .btn-navbar:active, .navbar .btn-navbar.active, .navbar .btn-navbar.disabled, .navbar .btn-navbar[disabled] {
+  color: white;
+  background-color: #e6e6e6;
+  *background-color: #d9d9d9;
+}
+/* line 510, ../sass/bootstrap/_mixins.scss */
+.navbar .btn-navbar:active, .navbar .btn-navbar.active {
+  background-color: #cccccc \9;
+}
+
+/* line 283, ../sass/bootstrap/_navbar.scss */
+.navbar .btn-navbar .icon-bar {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: #f5f5f5;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* line 291, ../sass/bootstrap/_navbar.scss */
+.btn-navbar .icon-bar + .icon-bar {
+  margin-top: 3px;
+}
+
+/* line 302, ../sass/bootstrap/_navbar.scss */
+.navbar .nav > li > .dropdown-menu:before {
+  content: '';
+  display: inline-block;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #ccc;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: -7px;
+  left: 9px;
+}
+/* line 313, ../sass/bootstrap/_navbar.scss */
+.navbar .nav > li > .dropdown-menu:after {
+  content: '';
+  display: inline-block;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid white;
+  position: absolute;
+  top: -6px;
+  left: 10px;
+}
+
+/* line 326, ../sass/bootstrap/_navbar.scss */
+.navbar-fixed-bottom .nav > li > .dropdown-menu:before {
+  border-top: 7px solid #ccc;
+  border-top-color: rgba(0, 0, 0, 0.2);
+  border-bottom: 0;
+  bottom: -7px;
+  top: auto;
+}
+/* line 333, ../sass/bootstrap/_navbar.scss */
+.navbar-fixed-bottom .nav > li > .dropdown-menu:after {
+  border-top: 6px solid white;
+  border-bottom: 0;
+  bottom: -6px;
+  top: auto;
+}
+
+/* line 343, ../sass/bootstrap/_navbar.scss */
+.navbar .nav li.dropdown > a:hover .caret,
+.navbar .nav li.dropdown > a:focus .caret {
+  border-top-color: #555555;
+  border-bottom-color: #555555;
+}
+
+/* line 351, ../sass/bootstrap/_navbar.scss */
+.navbar .nav li.dropdown.open > .dropdown-toggle,
+.navbar .nav li.dropdown.active > .dropdown-toggle,
+.navbar .nav li.dropdown.open.active > .dropdown-toggle {
+  background-color: #e6e6e6;
+  color: #555555;
+}
+
+/* line 355, ../sass/bootstrap/_navbar.scss */
+.navbar .nav li.dropdown > .dropdown-toggle .caret {
+  border-top-color: #777777;
+  border-bottom-color: #777777;
+}
+
+/* line 361, ../sass/bootstrap/_navbar.scss */
+.navbar .nav li.dropdown.open > .dropdown-toggle .caret,
+.navbar .nav li.dropdown.active > .dropdown-toggle .caret,
+.navbar .nav li.dropdown.open.active > .dropdown-toggle .caret {
+  border-top-color: #555555;
+  border-bottom-color: #555555;
+}
+
+/* line 368, ../sass/bootstrap/_navbar.scss */
+.navbar .pull-right > li > .dropdown-menu,
+.navbar .nav > li > .dropdown-menu.pull-right {
+  left: auto;
+  right: 0;
+}
+/* line 371, ../sass/bootstrap/_navbar.scss */
+.navbar .pull-right > li > .dropdown-menu:before,
+.navbar .nav > li > .dropdown-menu.pull-right:before {
+  left: auto;
+  right: 12px;
+}
+/* line 375, ../sass/bootstrap/_navbar.scss */
+.navbar .pull-right > li > .dropdown-menu:after,
+.navbar .nav > li > .dropdown-menu.pull-right:after {
+  left: auto;
+  right: 13px;
+}
+/* line 379, ../sass/bootstrap/_navbar.scss */
+.navbar .pull-right > li > .dropdown-menu .dropdown-menu,
+.navbar .nav > li > .dropdown-menu.pull-right .dropdown-menu {
+  left: auto;
+  right: 100%;
+  margin-left: 0;
+  margin-right: -1px;
+  -webkit-border-radius: 6px 0 6px 6px;
+  -moz-border-radius: 6px 0 6px 6px;
+  border-radius: 6px 0 6px 6px;
+}
+
+/* line 394, ../sass/bootstrap/_navbar.scss */
+.navbar-inverse .navbar-inner {
+  background-color: #1b1b1b;
+  background-image: -moz-linear-gradient(top, #222222, #111111);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#222222), to(#111111));
+  background-image: -webkit-linear-gradient(top, #222222, #111111);
+  background-image: -o-linear-gradient(top, #222222, #111111);
+  background-image: linear-gradient(to bottom, #222222, #111111);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF222222', endColorstr='#FF111111', GradientType=0);
+  border-color: #252525;
+}
+/* line 400, ../sass/bootstrap/_navbar.scss */
+.navbar-inverse .brand,
+.navbar-inverse .nav > li > a {
+  color: #999999;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+/* line 404, ../sass/bootstrap/_navbar.scss */
+.navbar-inverse .brand:hover, .navbar-inverse .brand:focus,
+.navbar-inverse .nav > li > a:hover,
+.navbar-inverse .nav > li > a:focus {
+  color: white;
+}
+/* line 409, ../sass/bootstrap/_navbar.scss */
+.navbar-inverse .brand {
+  color: #999999;
+}
+/* line 413, ../sass/bootstrap/_navbar.scss */
+.navbar-inverse .navbar-text {
+  color: #999999;
+}
+/* line 418, ../sass/bootstrap/_navbar.scss */
+.navbar-inverse .nav > li > a:focus,
+.navbar-inverse .nav > li > a:hover {
+  background-color: transparent;
+  color: white;
+}
+/* line 425, ../sass/bootstrap/_navbar.scss */
+.navbar-inverse .nav .active > a,
+.navbar-inverse .nav .active > a:hover,
+.navbar-inverse .nav .active > a:focus {
+  color: white;
+  background-color: #111111;
+}
+/* line 431, ../sass/bootstrap/_navbar.scss */
+.navbar-inverse .navbar-link {
+  color: #999999;
+}
+/* line 434, ../sass/bootstrap/_navbar.scss */
+.navbar-inverse .navbar-link:hover, .navbar-inverse .navbar-link:focus {
+  color: white;
+}
+/* line 440, ../sass/bootstrap/_navbar.scss */
+.navbar-inverse .divider-vertical {
+  border-left-color: #111111;
+  border-right-color: #222222;
+}
+/* line 448, ../sass/bootstrap/_navbar.scss */
+.navbar-inverse .nav li.dropdown.open > .dropdown-toggle,
+.navbar-inverse .nav li.dropdown.active > .dropdown-toggle,
+.navbar-inverse .nav li.dropdown.open.active > .dropdown-toggle {
+  background-color: #111111;
+  color: white;
+}
+/* line 453, ../sass/bootstrap/_navbar.scss */
+.navbar-inverse .nav li.dropdown > a:hover .caret,
+.navbar-inverse .nav li.dropdown > a:focus .caret {
+  border-top-color: white;
+  color: white;
+}
+/* line 457, ../sass/bootstrap/_navbar.scss */
+.navbar-inverse .nav li.dropdown > .dropdown-toggle .caret {
+  border-top-color: #999999;
+  border-bottom-color: #999999;
+}
+/* line 463, ../sass/bootstrap/_navbar.scss */
+.navbar-inverse .nav li.dropdown.open > .dropdown-toggle .caret,
+.navbar-inverse .nav li.dropdown.active > .dropdown-toggle .caret,
+.navbar-inverse .nav li.dropdown.open.active > .dropdown-toggle .caret {
+  border-top-color: white;
+  border-bottom-color: white;
+}
+/* line 470, ../sass/bootstrap/_navbar.scss */
+.navbar-inverse .navbar-search .search-query {
+  color: white;
+  background-color: #515151;
+  border-color: #111111;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.15);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.15);
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+/* line 83, ../sass/bootstrap/_mixins.scss */
+.navbar-inverse .navbar-search .search-query:-moz-placeholder {
+  color: #cccccc;
+}
+/* line 86, ../sass/bootstrap/_mixins.scss */
+.navbar-inverse .navbar-search .search-query:-ms-input-placeholder {
+  color: #cccccc;
+}
+/* line 89, ../sass/bootstrap/_mixins.scss */
+.navbar-inverse .navbar-search .search-query::-webkit-input-placeholder {
+  color: #cccccc;
+}
+/* line 480, ../sass/bootstrap/_navbar.scss */
+.navbar-inverse .navbar-search .search-query:focus, .navbar-inverse .navbar-search .search-query.focused {
+  padding: 5px 15px;
+  color: #333333;
+  text-shadow: 0 1px 0 white;
+  background-color: white;
+  border: 0;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+  outline: 0;
+}
+/* line 493, ../sass/bootstrap/_navbar.scss */
+.navbar-inverse .btn-navbar {
+  color: white;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #0e0e0e;
+  background-image: -moz-linear-gradient(top, #151515, #040404);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#151515), to(#040404));
+  background-image: -webkit-linear-gradient(top, #151515, #040404);
+  background-image: -o-linear-gradient(top, #151515, #040404);
+  background-image: linear-gradient(to bottom, #151515, #040404);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF151515', endColorstr='#FF040404', GradientType=0);
+  border-color: #040404 #040404 black;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #040404;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+/* line 502, ../sass/bootstrap/_mixins.scss */
+.navbar-inverse .btn-navbar:hover, .navbar-inverse .btn-navbar:active, .navbar-inverse .btn-navbar.active, .navbar-inverse .btn-navbar.disabled, .navbar-inverse .btn-navbar[disabled] {
+  color: white;
+  background-color: #040404;
+  *background-color: black;
+}
+/* line 510, ../sass/bootstrap/_mixins.scss */
+.navbar-inverse .btn-navbar:active, .navbar-inverse .btn-navbar.active {
+  background-color: black \9;
+}
+
+/* line 9, ../sass/bootstrap/_navs.scss */
+.nav {
+  margin-left: 0;
+  margin-bottom: 1.5em;
+  list-style: none;
+}
+
+/* line 16, ../sass/bootstrap/_navs.scss */
+.nav > li > a {
+  display: block;
+}
+
+/* line 20, ../sass/bootstrap/_navs.scss */
+.nav > li > a:hover,
+.nav > li > a:focus {
+  text-decoration: none;
+  background-color: #eeeeee;
+}
+
+/* line 27, ../sass/bootstrap/_navs.scss */
+.nav > li > a > img {
+  max-width: none;
+}
+
+/* line 32, ../sass/bootstrap/_navs.scss */
+.nav > .pull-right {
+  float: right;
+}
+
+/* line 37, ../sass/bootstrap/_navs.scss */
+.nav-header {
+  display: block;
+  padding: 3px 15px;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 1.5em;
+  color: #999999;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+}
+
+/* line 48, ../sass/bootstrap/_navs.scss */
+.nav li + .nav-header {
+  margin-top: 9px;
+}
+
+/* line 57, ../sass/bootstrap/_navs.scss */
+.nav-list {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 0;
+}
+
+/* line 63, ../sass/bootstrap/_navs.scss */
+.nav-list > li > a,
+.nav-list .nav-header {
+  margin-left: -15px;
+  margin-right: -15px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+/* line 68, ../sass/bootstrap/_navs.scss */
+.nav-list > li > a {
+  padding: 3px 15px;
+}
+
+/* line 73, ../sass/bootstrap/_navs.scss */
+.nav-list > .active > a,
+.nav-list > .active > a:hover,
+.nav-list > .active > a:focus {
+  color: white;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+  background-color: #0044ee;
+}
+
+/* line 79, ../sass/bootstrap/_navs.scss */
+.nav-list [class^="icon-"],
+.nav-list [class*=" icon-"] {
+  margin-right: 2px;
+}
+
+/* line 83, ../sass/bootstrap/_navs.scss */
+.nav-list .divider {
+  *width: 100%;
+  height: 1px;
+  margin: -0.25em 1px;
+  *margin: -5px 0 5px;
+  overflow: hidden;
+  background-color: #e5e5e5;
+  border-bottom: 1px solid white;
+}
+
+/* line 94, ../sass/bootstrap/_navs.scss */
+.nav-tabs,
+.nav-pills {
+  *zoom: 1;
+}
+/* line 15, ../sass/bootstrap/_mixins.scss */
+.nav-tabs:before, .nav-tabs:after,
+.nav-pills:before,
+.nav-pills:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+/* line 22, ../sass/bootstrap/_mixins.scss */
+.nav-tabs:after,
+.nav-pills:after {
+  clear: both;
+}
+
+/* line 98, ../sass/bootstrap/_navs.scss */
+.nav-tabs > li,
+.nav-pills > li {
+  float: left;
+}
+
+/* line 102, ../sass/bootstrap/_navs.scss */
+.nav-tabs > li > a,
+.nav-pills > li > a {
+  padding-right: 12px;
+  padding-left: 12px;
+  margin-right: 2px;
+  line-height: 14px;
+}
+
+/* line 113, ../sass/bootstrap/_navs.scss */
+.nav-tabs {
+  border-bottom: 1px solid #ddd;
+}
+
+/* line 117, ../sass/bootstrap/_navs.scss */
+.nav-tabs > li {
+  margin-bottom: -1px;
+}
+
+/* line 121, ../sass/bootstrap/_navs.scss */
+.nav-tabs > li > a {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  line-height: 1.5em;
+  border: 1px solid transparent;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+/* line 128, ../sass/bootstrap/_navs.scss */
+.nav-tabs > li > a:hover, .nav-tabs > li > a:focus {
+  border-color: #eeeeee #eeeeee #dddddd;
+}
+
+/* line 135, ../sass/bootstrap/_navs.scss */
+.nav-tabs > .active > a,
+.nav-tabs > .active > a:hover,
+.nav-tabs > .active > a:focus {
+  color: #555555;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
+  cursor: default;
+}
+
+/* line 148, ../sass/bootstrap/_navs.scss */
+.nav-pills > li > a {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 159, ../sass/bootstrap/_navs.scss */
+.nav-pills > .active > a,
+.nav-pills > .active > a:hover,
+.nav-pills > .active > a:focus {
+  color: white;
+  background-color: #0044ee;
+}
+
+/* line 170, ../sass/bootstrap/_navs.scss */
+.nav-stacked > li {
+  float: none;
+}
+
+/* line 173, ../sass/bootstrap/_navs.scss */
+.nav-stacked > li > a {
+  margin-right: 0;
+}
+
+/* line 178, ../sass/bootstrap/_navs.scss */
+.nav-tabs.nav-stacked {
+  border-bottom: 0;
+}
+
+/* line 181, ../sass/bootstrap/_navs.scss */
+.nav-tabs.nav-stacked > li > a {
+  border: 1px solid #ddd;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+/* line 185, ../sass/bootstrap/_navs.scss */
+.nav-tabs.nav-stacked > li:first-child > a {
+  -webkit-border-top-right-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  border-top-right-radius: 4px;
+  -webkit-border-top-left-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+  border-top-left-radius: 4px;
+}
+
+/* line 188, ../sass/bootstrap/_navs.scss */
+.nav-tabs.nav-stacked > li:last-child > a {
+  -webkit-border-bottom-right-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  border-bottom-right-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+/* line 192, ../sass/bootstrap/_navs.scss */
+.nav-tabs.nav-stacked > li > a:hover,
+.nav-tabs.nav-stacked > li > a:focus {
+  border-color: #ddd;
+  z-index: 2;
+}
+
+/* line 198, ../sass/bootstrap/_navs.scss */
+.nav-pills.nav-stacked > li > a {
+  margin-bottom: 3px;
+}
+
+/* line 201, ../sass/bootstrap/_navs.scss */
+.nav-pills.nav-stacked > li:last-child > a {
+  margin-bottom: 1px;
+}
+
+/* line 210, ../sass/bootstrap/_navs.scss */
+.nav-tabs .dropdown-menu {
+  -webkit-border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  border-radius: 0 0 6px 6px;
+}
+
+/* line 213, ../sass/bootstrap/_navs.scss */
+.nav-pills .dropdown-menu {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+/* line 220, ../sass/bootstrap/_navs.scss */
+.nav .dropdown-toggle .caret {
+  border-top-color: #0044ee;
+  border-bottom-color: #0044ee;
+  margin-top: 6px;
+}
+
+/* line 226, ../sass/bootstrap/_navs.scss */
+.nav .dropdown-toggle:hover .caret,
+.nav .dropdown-toggle:focus .caret {
+  border-top-color: #0044ff;
+  border-bottom-color: #0044ff;
+}
+
+/* move down carets for tabs */
+/* line 231, ../sass/bootstrap/_navs.scss */
+.nav-tabs .dropdown-toggle .caret {
+  margin-top: 8px;
+}
+
+/* line 237, ../sass/bootstrap/_navs.scss */
+.nav .active .dropdown-toggle .caret {
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+}
+
+/* line 241, ../sass/bootstrap/_navs.scss */
+.nav-tabs .active .dropdown-toggle .caret {
+  border-top-color: #555555;
+  border-bottom-color: #555555;
+}
+
+/* line 249, ../sass/bootstrap/_navs.scss */
+.nav > .dropdown.active > a:hover,
+.nav > .dropdown.active > a:focus {
+  cursor: pointer;
+}
+
+/* line 258, ../sass/bootstrap/_navs.scss */
+.nav-tabs .open .dropdown-toggle,
+.nav-pills .open .dropdown-toggle,
+.nav > li.dropdown.open.active > a:hover,
+.nav > li.dropdown.open.active > a:focus {
+  color: white;
+  background-color: #999999;
+  border-color: #999999;
+}
+
+/* line 266, ../sass/bootstrap/_navs.scss */
+.nav li.dropdown.open .caret,
+.nav li.dropdown.open.active .caret,
+.nav li.dropdown.open a:hover .caret,
+.nav li.dropdown.open a:focus .caret {
+  border-top-color: white;
+  border-bottom-color: white;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+/* line 274, ../sass/bootstrap/_navs.scss */
+.tabs-stacked .open > a:hover,
+.tabs-stacked .open > a:focus {
+  border-color: #999999;
+}
+
+/* line 288, ../sass/bootstrap/_navs.scss */
+.tabbable {
+  *zoom: 1;
+}
+/* line 15, ../sass/bootstrap/_mixins.scss */
+.tabbable:before, .tabbable:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+/* line 22, ../sass/bootstrap/_mixins.scss */
+.tabbable:after {
+  clear: both;
+}
+
+/* line 291, ../sass/bootstrap/_navs.scss */
+.tab-content {
+  overflow: auto;
+}
+
+/* line 298, ../sass/bootstrap/_navs.scss */
+.tabs-below > .nav-tabs,
+.tabs-right > .nav-tabs,
+.tabs-left > .nav-tabs {
+  border-bottom: 0;
+}
+
+/* line 304, ../sass/bootstrap/_navs.scss */
+.tab-content > .tab-pane,
+.pill-content > .pill-pane {
+  display: none;
+}
+
+/* line 308, ../sass/bootstrap/_navs.scss */
+.tab-content > .active,
+.pill-content > .active {
+  display: block;
+}
+
+/* line 316, ../sass/bootstrap/_navs.scss */
+.tabs-below > .nav-tabs {
+  border-top: 1px solid #ddd;
+}
+
+/* line 319, ../sass/bootstrap/_navs.scss */
+.tabs-below > .nav-tabs > li {
+  margin-top: -1px;
+  margin-bottom: 0;
+}
+
+/* line 323, ../sass/bootstrap/_navs.scss */
+.tabs-below > .nav-tabs > li > a {
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
+}
+/* line 326, ../sass/bootstrap/_navs.scss */
+.tabs-below > .nav-tabs > li > a:hover, .tabs-below > .nav-tabs > li > a:focus {
+  border-bottom-color: transparent;
+  border-top-color: #ddd;
+}
+
+/* line 333, ../sass/bootstrap/_navs.scss */
+.tabs-below > .nav-tabs > .active > a,
+.tabs-below > .nav-tabs > .active > a:hover,
+.tabs-below > .nav-tabs > .active > a:focus {
+  border-color: transparent #ddd #ddd #ddd;
+}
+
+/* line 342, ../sass/bootstrap/_navs.scss */
+.tabs-left > .nav-tabs > li,
+.tabs-right > .nav-tabs > li {
+  float: none;
+}
+
+/* line 346, ../sass/bootstrap/_navs.scss */
+.tabs-left > .nav-tabs > li > a,
+.tabs-right > .nav-tabs > li > a {
+  min-width: 74px;
+  margin-right: 0;
+  margin-bottom: 3px;
+}
+
+/* line 353, ../sass/bootstrap/_navs.scss */
+.tabs-left > .nav-tabs {
+  float: left;
+  margin-right: 19px;
+  border-right: 1px solid #ddd;
+}
+
+/* line 358, ../sass/bootstrap/_navs.scss */
+.tabs-left > .nav-tabs > li > a {
+  margin-right: -1px;
+  -webkit-border-radius: 4px 0 0 4px;
+  -moz-border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
+}
+
+/* line 363, ../sass/bootstrap/_navs.scss */
+.tabs-left > .nav-tabs > li > a:hover,
+.tabs-left > .nav-tabs > li > a:focus {
+  border-color: #eeeeee #dddddd #eeeeee #eeeeee;
+}
+
+/* line 368, ../sass/bootstrap/_navs.scss */
+.tabs-left > .nav-tabs .active > a,
+.tabs-left > .nav-tabs .active > a:hover,
+.tabs-left > .nav-tabs .active > a:focus {
+  border-color: #ddd transparent #ddd #ddd;
+  *border-right-color: white;
+}
+
+/* line 374, ../sass/bootstrap/_navs.scss */
+.tabs-right > .nav-tabs {
+  float: right;
+  margin-left: 19px;
+  border-left: 1px solid #ddd;
+}
+
+/* line 379, ../sass/bootstrap/_navs.scss */
+.tabs-right > .nav-tabs > li > a {
+  margin-left: -1px;
+  -webkit-border-radius: 0 4px 4px 0;
+  -moz-border-radius: 0 4px 4px 0;
+  border-radius: 0 4px 4px 0;
+}
+
+/* line 384, ../sass/bootstrap/_navs.scss */
+.tabs-right > .nav-tabs > li > a:hover,
+.tabs-right > .nav-tabs > li > a:focus {
+  border-color: #eeeeee #eeeeee #eeeeee #dddddd;
+}
+
+/* line 389, ../sass/bootstrap/_navs.scss */
+.tabs-right > .nav-tabs .active > a,
+.tabs-right > .nav-tabs .active > a:hover,
+.tabs-right > .nav-tabs .active > a:focus {
+  border-color: #ddd #ddd #ddd transparent;
+  *border-left-color: white;
+}
+
+/* line 400, ../sass/bootstrap/_navs.scss */
+.nav > .disabled > a {
+  color: #999999;
+}
+
+/* line 405, ../sass/bootstrap/_navs.scss */
+.nav > .disabled > a:hover,
+.nav > .disabled > a:focus {
+  text-decoration: none;
+  background-color: transparent;
+  cursor: default;
+}
+
+@media (max-width: 60em) {
+  /* line 13, ../sass/bootstrap/_responsive-navbar.scss */
+  body {
+    padding-top: 0;
+  }
+
+  /* line 18, ../sass/bootstrap/_responsive-navbar.scss */
+  .navbar-fixed-top,
+  .navbar-fixed-bottom {
+    position: static;
+  }
+
+  /* line 21, ../sass/bootstrap/_responsive-navbar.scss */
+  .navbar-fixed-top {
+    margin-bottom: 1.5em;
+  }
+
+  /* line 24, ../sass/bootstrap/_responsive-navbar.scss */
+  .navbar-fixed-bottom {
+    margin-top: 1.5em;
+  }
+
+  /* line 28, ../sass/bootstrap/_responsive-navbar.scss */
+  .navbar-fixed-top .navbar-inner,
+  .navbar-fixed-bottom .navbar-inner {
+    padding: 5px;
+  }
+
+  /* line 31, ../sass/bootstrap/_responsive-navbar.scss */
+  .navbar .container {
+    width: auto;
+    padding: 0;
+  }
+
+  /* line 36, ../sass/bootstrap/_responsive-navbar.scss */
+  .navbar .brand {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 0 0 -5px;
+  }
+
+  /* line 45, ../sass/bootstrap/_responsive-navbar.scss */
+  .nav-collapse {
+    clear: both;
+  }
+
+  /* line 49, ../sass/bootstrap/_responsive-navbar.scss */
+  .nav-collapse .nav {
+    float: none;
+    margin: 0 0 0.75em;
+  }
+
+  /* line 53, ../sass/bootstrap/_responsive-navbar.scss */
+  .nav-collapse .nav > li {
+    float: none;
+  }
+
+  /* line 56, ../sass/bootstrap/_responsive-navbar.scss */
+  .nav-collapse .nav > li > a {
+    margin-bottom: 2px;
+  }
+
+  /* line 59, ../sass/bootstrap/_responsive-navbar.scss */
+  .nav-collapse .nav > .divider-vertical {
+    display: none;
+  }
+
+  /* line 62, ../sass/bootstrap/_responsive-navbar.scss */
+  .nav-collapse .nav .nav-header {
+    color: #777777;
+    text-shadow: none;
+  }
+
+  /* line 68, ../sass/bootstrap/_responsive-navbar.scss */
+  .nav-collapse .nav > li > a,
+  .nav-collapse .dropdown-menu a {
+    padding: 9px 15px;
+    font-weight: bold;
+    color: #777777;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+  }
+
+  /* line 75, ../sass/bootstrap/_responsive-navbar.scss */
+  .nav-collapse .btn {
+    padding: 4px 10px 4px;
+    font-weight: normal;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+  }
+
+  /* line 80, ../sass/bootstrap/_responsive-navbar.scss */
+  .nav-collapse .dropdown-menu li + li a {
+    margin-bottom: 2px;
+  }
+
+  /* line 86, ../sass/bootstrap/_responsive-navbar.scss */
+  .nav-collapse .nav > li > a:hover,
+  .nav-collapse .nav > li > a:focus,
+  .nav-collapse .dropdown-menu a:hover,
+  .nav-collapse .dropdown-menu a:focus {
+    background-color: #f2f2f2;
+  }
+
+  /* line 90, ../sass/bootstrap/_responsive-navbar.scss */
+  .navbar-inverse .nav-collapse .nav > li > a,
+  .navbar-inverse .nav-collapse .dropdown-menu a {
+    color: #999999;
+  }
+
+  /* line 96, ../sass/bootstrap/_responsive-navbar.scss */
+  .navbar-inverse .nav-collapse .nav > li > a:hover,
+  .navbar-inverse .nav-collapse .nav > li > a:focus,
+  .navbar-inverse .nav-collapse .dropdown-menu a:hover,
+  .navbar-inverse .nav-collapse .dropdown-menu a:focus {
+    background-color: #111111;
+  }
+
+  /* line 100, ../sass/bootstrap/_responsive-navbar.scss */
+  .nav-collapse.in .btn-group {
+    margin-top: 5px;
+    padding: 0;
+  }
+
+  /* line 105, ../sass/bootstrap/_responsive-navbar.scss */
+  .nav-collapse .dropdown-menu {
+    position: static;
+    top: auto;
+    left: auto;
+    float: none;
+    display: none;
+    max-width: none;
+    margin: 0 15px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+
+  /* line 119, ../sass/bootstrap/_responsive-navbar.scss */
+  .nav-collapse .open > .dropdown-menu {
+    display: block;
+  }
+
+  /* line 124, ../sass/bootstrap/_responsive-navbar.scss */
+  .nav-collapse .dropdown-menu:before,
+  .nav-collapse .dropdown-menu:after {
+    display: none;
+  }
+
+  /* line 127, ../sass/bootstrap/_responsive-navbar.scss */
+  .nav-collapse .dropdown-menu .divider {
+    display: none;
+  }
+
+  /* line 132, ../sass/bootstrap/_responsive-navbar.scss */
+  .nav-collapse .nav > li > .dropdown-menu:before, .nav-collapse .nav > li > .dropdown-menu:after {
+    display: none;
+  }
+
+  /* line 138, ../sass/bootstrap/_responsive-navbar.scss */
+  .nav-collapse .navbar-form,
+  .nav-collapse .navbar-search {
+    float: none;
+    padding: 0.75em 15px;
+    margin: 0.75em 0;
+    border-top: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  /* line 147, ../sass/bootstrap/_responsive-navbar.scss */
+  .navbar-inverse .nav-collapse .navbar-form,
+  .navbar-inverse .nav-collapse .navbar-search {
+    border-top-color: #111111;
+    border-bottom-color: #111111;
+  }
+
+  /* line 152, ../sass/bootstrap/_responsive-navbar.scss */
+  .navbar .nav-collapse .nav.pull-right {
+    float: none;
+    margin-left: 0;
+  }
+
+  /* line 158, ../sass/bootstrap/_responsive-navbar.scss */
+  .nav-collapse,
+  .nav-collapse.collapse {
+    overflow: hidden;
+    height: 0;
+  }
+
+  /* line 163, ../sass/bootstrap/_responsive-navbar.scss */
+  .navbar .btn-navbar {
+    display: block;
+  }
+
+  /* line 169, ../sass/bootstrap/_responsive-navbar.scss */
+  .navbar-static .navbar-inner {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@media (min-width: 980px) {
+  /* line 184, ../sass/bootstrap/_responsive-navbar.scss */
+  .nav-collapse.collapse {
+    height: auto !important;
+    overflow: visible !important;
+  }
+}
+/* line 6, ../sass/bootstrap/_component-animations.scss */
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity 0.15s linear;
+  -moz-transition: opacity 0.15s linear;
+  -o-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+}
+/* line 9, ../sass/bootstrap/_component-animations.scss */
+.fade.in {
+  opacity: 1;
+}
+
+/* line 14, ../sass/bootstrap/_component-animations.scss */
+.collapse {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.35s ease;
+  -moz-transition: height 0.35s ease;
+  -o-transition: height 0.35s ease;
+  transition: height 0.35s ease;
+}
+/* line 19, ../sass/bootstrap/_component-animations.scss */
+.collapse.in {
+  height: auto;
+}
+
+/* line 7, ../sass/bootstrap/_utilities.scss */
+.pull-right {
+  float: right;
+}
+
+/* line 10, ../sass/bootstrap/_utilities.scss */
+.pull-left {
+  float: left;
+}
+
+/* line 15, ../sass/bootstrap/_utilities.scss */
+.hide {
+  display: none;
+}
+
+/* line 18, ../sass/bootstrap/_utilities.scss */
+.show {
+  display: block;
+}
+
+/* line 23, ../sass/bootstrap/_utilities.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/* line 28, ../sass/bootstrap/_utilities.scss */
+.affix {
+  position: fixed;
+}
+
+/* line 33, ../sass/bootstrap/_utilities.scss */
+.clearfix {
+  *zoom: 1;
+}
+/* line 15, ../sass/bootstrap/_mixins.scss */
+.clearfix:before, .clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+/* line 22, ../sass/bootstrap/_mixins.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 38, ../sass/bootstrap/_utilities.scss */
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+/* line 43, ../sass/bootstrap/_utilities.scss */
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*=========================================
+
+	Navbar Drop downs
+
+===========================================*/
+/* line 54, ../sass/screen.scss */
+.navbar-inner {
+  border: none;
+}
+
+/* line 58, ../sass/screen.scss */
+.navbar ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+/* line 63, ../sass/screen.scss */
+.navbar ul li {
+  padding: 0;
+}
+
+/* line 67, ../sass/screen.scss */
+.navbar .navbar-inner ul li a {
+  padding: .65em 1.5em .50em;
+  display: block;
+  color: #999999;
+}
+
+/* line 73, ../sass/screen.scss */
+.navbar .navbar-inner ul li a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 78, ../sass/screen.scss */
+.navbar .navbar-inner ul ul li a {
+  padding: .5em 1.5em;
+}
+
+/* line 83, ../sass/screen.scss */
+.navbar ul ul {
+  margin: 0px;
+  position: relative;
+  padding-left: 2em;
+}
+
+/* line 89, ../sass/screen.scss */
+.navbar ul li:hover ul {
+  display: block;
+}
+
 /*=========================================
 
 	Basic Styles
 
 ===========================================*/
-/* line 42, ../sass/screen.scss */
+/* line 101, ../sass/screen.scss */
 * {
   margin: 0;
   padding: 0;
 }
 
-/* line 45, ../sass/screen.scss */
+/* line 104, ../sass/screen.scss */
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -1416,27 +2848,43 @@ body {
 	Links & Typography
 
 ===========================================*/
-/* line 61, ../sass/screen.scss */
+/* line 120, ../sass/screen.scss */
 a {
   color: #0044ee;
   text-decoration: none;
 }
 
-/* line 66, ../sass/screen.scss */
+/* line 125, ../sass/screen.scss */
 a:hover,
 a:focus {
   color: #0044ff;
   text-decoration: underline;
 }
 
-/* line 71, ../sass/screen.scss */
-h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 0;
+/* line 130, ../sass/screen.scss */
+.pure-button:hover, .pure-button:focus {
+  color: #444;
+  text-decoration: none;
 }
 
-/* line 75, ../sass/screen.scss */
+/* line 135, ../sass/screen.scss */
+.pure-button-primary:hover, .pure-button-primary:focus {
+  color: #fff;
+}
+
+/* line 139, ../sass/screen.scss */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5em;
+}
+
+/* line 143, ../sass/screen.scss */
 p {
   margin: 0.5em 0 1.5em;
+}
+
+/* line 147, ../sass/screen.scss */
+ol, ul {
+  padding: 0 0 0 5em;
 }
 
 /*=========================================
@@ -1445,24 +2893,24 @@ p {
 	http://css-tricks.com/snippets/css/sticky-footer/
 
 ===========================================*/
-/* line 87, ../sass/screen.scss */
+/* line 159, ../sass/screen.scss */
 html, body, #outer-wrap {
   height: 100%;
 }
 
-/* line 89, ../sass/screen.scss */
+/* line 161, ../sass/screen.scss */
 body > #outer-wrap {
   height: auto;
   min-height: 100%;
 }
 
-/* line 91, ../sass/screen.scss */
+/* line 163, ../sass/screen.scss */
 #inner-wrap {
   padding-bottom: 150px;
 }
 
 /* must be same height as the footer */
-/* line 93, ../sass/screen.scss */
+/* line 165, ../sass/screen.scss */
 footer {
   position: relative;
   margin-top: -150px;
@@ -1483,6 +2931,8 @@ footer {
 /*=========================================
 
 	Default is single column split into 4
+	see http://goldengridsystem.com/
+	and http://seangoresht.com/index.php/tutorials/item/the-golden-gridlet-system-ggs-explained
 
 ===========================================*/
 /*
@@ -1501,9 +2951,21 @@ footer {
 
 ===========================================*/
 @media (min-width: 60em) {
-  /* line 133, ../sass/screen.scss */
+  /* line 207, ../sass/screen.scss */
   #inner-wrap {
     padding-top: 60px;
+  }
+
+  /* line 210, ../sass/screen.scss */
+  .navbar-inner {
+    height: 2.6em;
+  }
+
+  /* line 214, ../sass/screen.scss */
+  .navbar ul ul {
+    display: none;
+    background: grey;
+    padding-left: 0;
   }
 }
 /*
@@ -1516,6 +2978,32 @@ footer {
 *	
 *
 */
+@media (min-width: 45em) {
+  /* line 234, ../sass/screen.scss */
+  .core-feature {
+    padding: 0 0.75em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    margin: 0 12.5% 3%;
+  }
+
+  /* line 239, ../sass/screen.scss */
+  .brand, .feature:first-child {
+    margin-left: 12.5%;
+  }
+
+  /* line 243, ../sass/screen.scss */
+  .feature {
+    padding: 0 0.75em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+  }
+}
 /*
 *
 *  Sixteen-column grid active

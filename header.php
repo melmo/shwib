@@ -22,11 +22,18 @@
 
         <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
 
-       <div class="navbar">
+       <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="navbar-inner">
                 <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
                     <a class="brand" href="#">Project name</a>
+                    <div class="nav-collapse collapse">
                     <?php get_template_part( 'menu', 'primary' ); ?>
+                </div><!--/.nav-collapse -->
                 </div>
             </div>
         </div>

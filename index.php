@@ -8,8 +8,10 @@
  *
  */
 get_header(); ?>
-<?php if (!is_singular() ){ get_template_part( 'loop-meta' ); }  ?>
+
         <div class="container">
+
+            <?php if (!is_singular() ){ get_template_part( 'loop-meta' ); }  ?>
             
             
             

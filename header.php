@@ -10,7 +10,7 @@
         <title><?php hybrid_document_title(); ?></title>
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="<?php bloginfo('template_url');?>/style.css">
-
+        <script src="<?php bloginfo('template_url');?>/_/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
         <?php wp_head(); ?> 
     </head>
     <body class="<?php hybrid_body_class(); ?>">
@@ -30,7 +30,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="#">Project name</a>
+                    <a class="brand" href="<?php bloginfo('url');?>">Project name</a>
                     <div class="nav-collapse collapse">
                     <?php get_template_part( 'menu', 'primary' ); ?>
                 </div><!--/.nav-collapse -->

@@ -3,93 +3,10 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-// Normalise and establish basic styles
-@import "_pure.0.1.0";
 
-// Basic responsive styles, basic container layout
-@import "_ggs";
-
-// Bootstrap helpers
-@import 'bootstrap/mixins';
-@import 'bootstrap/variables';
-
-$navbarCollapseWidth : 60em;
-$linkColor : #0044ee;
-$linkColorHover : #0044ff;
-$baseFontFamily : Arial, Helvetica, sans-serif;
-$baseFontSize : 1em;
-$baseLineHeight : 1.5em;
-$textColor : #333;
-$bodyBackground : #fff;
-$navbarHeight : 2.5em;
-
-
-// Bootstrap navbar
-@import 'bootstrap/navbar';
-@import 'bootstrap/navs';
-@import 'bootstrap/responsive-navbar';
-@import 'bootstrap/component-animations';
-
-
-// Optional bootstrap extrax
-//@import 'bootstrap/buttons';
-//@import 'bootstrap/type';
-//@import 'bootstrap/tables';
-@import 'bootstrap/utilities';
-//@import 'bootstrap/responsive-utilities';
-//@import 'bootstrap/sprites';
-//@import 'bootstrap/forms';
-
-// CSS3 mixins - avoid vendor prefixes
+@import "bootstrap/bootstrap";
+@import "bootstrap/responsive";
 @import "compass/css3";
-
-
-/*=========================================
-
-	Navbar Drop downs
-
-===========================================*/
-
-
-.navbar-inner {
-	border: none;
-}
-
-.navbar ul {
-	padding-left: 0;
-	list-style-type: none;
-}
-
-.navbar ul li {
-	padding: 0;
-}
-
-.navbar .navbar-inner ul li a {
-	padding: .65em 1.5em .50em;
-	display: block;
-	color: #999999;
-}
-
-.navbar .navbar-inner ul li a:hover  {
-	color: #fff;
-	text-decoration: none;
-}
-
-.navbar .navbar-inner ul ul li a {
-	padding: .5em 1.5em;
-
-}
-
-.navbar ul ul {
-	margin: 0px;
-	position: relative;
-	padding-left: 2em;
-}
-
-.navbar ul li:hover ul {
-	display: block;
-}
-
 
 
 /*=========================================
@@ -111,6 +28,8 @@ body {
 }
 
 
+
+
 /*=========================================
 
 	Links & Typography
@@ -127,25 +46,135 @@ a:focus {
   text-decoration: underline;
 }
 
-.pure-button:hover, .pure-button:focus {
-	color: #444;
-  	text-decoration: none;
+menu, ol, ul  {
+  margin-left: 0;
+  padding-left: 0;
 }
 
-.pure-button-primary:hover, .pure-button-primary:focus {
-	color: #fff;
+ol li, ul li {
+  margin-left: -2.5em;
+  padding-left: .5em;
+}
+
+
+h1 {
+  font-size: 2.5em;
+  line-height: 1.2em;
+}
+
+h2 {
+  font-size: 2.2em;
+  line-height: 1.5em;
+}
+
+h3 {
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
+h4 {
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+h5 {
+  font-size: 1em;
+  line-height: 1.5em;
+  font-weight: bold;
+}
+
+h6 {
+  font-size: 1em;
+  line-height: 1.5em;
+  font-style:italic;
+  font-weight: normal;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	margin-bottom: 0.5em;
+	margin: 1em 0 .5em;
 }
 
 p {
-	margin: 0.5em 0 1.5em;
+	margin: 0 0 1em;
 }
 
-ol, ul {
-  padding: 0 0 0 5em;
+hr {
+	height: 0px;
+	border:0px;
+	border-top: 1px solid #aaa;
+	border-bottom: 1px solid #ccc;
+	margin:.5em 0 1.5em;
+}
+
+fieldset {
+  margin-top: .5em;
+}
+
+blockquote {
+  border-left :.3em solid #aaa;
+  padding-left: .8em;
+}
+
+dd {
+  margin: 0;
+}
+
+
+/*=========================================
+
+	Menus - integrate bootstrap styles
+	with wordpress menu, drop downs
+
+===========================================*/
+
+#inner-wrap {
+    padding-top: 60px;
+}
+
+@media (max-width: 979px) {
+	#inner-wrap {
+	    padding-top: 0px;
+	}
+}
+
+.current-menu-item {
+	@extend .active;
+}
+
+.nav ul, .nav ol {
+	list-style-type: none;
+}
+
+ul li, ol li {
+	margin-left: 0px;
+	padding-left: 0px;
+}
+
+.nav li a {
+	display: block;
+	float: none;
+	padding: 10px 15px 10px;
+	text-decoration: none;
+	color: #999999;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.nav li a:hover {
+	color: white;
+}
+
+.navbar-inner {
+	height: 41px;
+}
+
+ul.sub-menu {
+	height:0px;
+	overflow: hidden;
+	background: black;
+}
+
+li:hover ul.sub-menu {
+	height: auto;
 }
 
 
@@ -160,7 +189,7 @@ html, body, #outer-wrap { height: 100%; }
 
 body > #outer-wrap {height: auto; min-height: 100%;}
 
-#inner-wrap { padding-bottom: 150px; }  /* must be same height as the footer */
+#inner-wrap { padding-bottom: 200px; }  /* must be same height as the footer plus extra for space*/
 
 footer { 
     position: relative;
@@ -176,85 +205,3 @@ footer {
 } 
 
 
-/*=========================================
-
-	Default is single column split into 4
-	see http://goldengridsystem.com/
-	and http://seangoresht.com/index.php/tutorials/item/the-golden-gridlet-system-ggs-explained
-
-===========================================*/
-
-
-/*
-*
-*  Four-column grid active
-    up to 45em/720px
-*  ----------------------------------------
-*  Margin   | #  1   2   3   4   |   Margin
-*  5.55555% | %  25  50  75  100 | 5.55555%
-*
-*/
-
-
-/*=========================================
-
-	Media Queries
-	Start with mobile and build up
-
-===========================================*/
-
-@media (min-width: $navbarCollapseWidth) {
-	#inner-wrap {
-		padding-top: 60px;
-	}
-	.navbar-inner {
-		height: 2.6em;
-	}
-	//Hide drop down submenus on larger screens
-	.navbar ul ul {
-		display: none;
-		background: grey;
-		padding-left: 0;
-	}
-}
-
-
-/*
-*
-*  Eight-column grid active
-*  up to 117em/1872px
-*  ----------------------------------------------------------------------
-*  Margin   | #  1     2     3     4     5     6     7     8   |   Margin
-*  5.55555% | %  12.5  25.0  37.5  50.0  62.5  75.0  87.5  100 | 5.55555%
-*	
-*
-*/
-
-@media (min-width:45em) {
-	.core-feature {
-		@include column;
-		margin: 0 12.5% 3%;
-	}
-
-	.brand, .feature:first-child  {
-		margin-left: 12.5%;
-	}
-
-	.feature {
-		@include column;
-		width: 25%;
-	}
-
-}
-
-
-
-/*
-*
-*  Sixteen-column grid active
-*  ----------------------------------------------------------------------------------------------------------------------
-*  Margin   | #  1     2     3     4     5     6     7     8     9     10    11    12    13    14    15    16  |   Margin
-*  5.55555% | %  6.25  12.5  18.75 25.0  31.25 37.5  43.75 50.0  56.25 62.5  68.75 75.0  81.25 87.5  93.75 100 | 5.55555%
-*	
-*
-*/

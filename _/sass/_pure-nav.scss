@@ -1,0 +1,45 @@
+/*=========================================
+
+	Navbar Drop downs
+
+===========================================*/
+
+
+.navbar-inner {
+	border: none;
+}
+
+.navbar ul {
+	padding-left: 0;
+	list-style-type: none;
+}
+
+.navbar ul li {
+	padding: 0;
+}
+
+.navbar .navbar-inner ul li a {
+	padding: .65em 1.5em .50em;
+	display: block;
+	color: #999999;
+}
+
+.navbar .navbar-inner ul li a:hover  {
+	color: #fff;
+	text-decoration: none;
+}
+
+.navbar .navbar-inner ul ul li a {
+	padding: .5em 1.5em;
+
+}
+
+.navbar ul ul {
+	margin: 0px;
+	position: relative;
+	padding-left: 2em;
+}
+
+.navbar ul li:hover ul {
+	display: block;
+}

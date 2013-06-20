@@ -536,19 +536,40 @@ return __($description);
 }
 
 function shwib_the_excerpt_max_charlength($charlength) {
-						   $excerpt = get_the_excerpt();
-						   $charlength++;
-						   if(strlen($excerpt)>$charlength) {
-							   $subex = substr($excerpt,0,$charlength-5);
-							   $exwords = explode(" ",$subex);
-							   $excut = -(strlen($exwords[count($exwords)-1]));
-							   if($excut<0) {
-									echo substr($subex,0,$excut);
-							   } else {
-									echo $subex;
-							   }?>
-							   <a style="text-decoration:none;" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">...</a><?php
-						   } else {
-							   echo $excerpt;
-						   }
-						}
+   $excerpt = get_the_excerpt();
+   $charlength++;
+   if(strlen($excerpt)>$charlength) {
+	   $subex = substr($excerpt,0,$charlength-5);
+	   $exwords = explode(" ",$subex);
+	   $excut = -(strlen($exwords[count($exwords)-1]));
+	   if($excut<0) {
+			echo substr($subex,0,$excut);
+	   } else {
+			echo $subex;
+	   }?>
+	   <a style="text-decoration:none;" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">...</a><?php
+   } else {
+	   echo $excerpt;
+   }
+}
+
+
+// Add menu-parent-item class to tops li of submenu
+add_filter( 'wp_nav_menu_objects', 'add_menu_parent_class' );
+function add_menu_parent_class( $items ) {
+	
+	$parents = array();
+	foreach ( $items as $item ) {
+		if ( $item->menu_item_parent && $item->menu_item_parent > 0 ) {
+			$parents[] = $item->menu_item_parent;
+		}
+	}
+	
+	foreach ( $items as $item ) {
+		if ( in_array( $item->ID, $parents ) ) {
+			$item->classes[] = 'menu-parent-item'; 
+		}
+	}
+	
+	return $items;    
+}

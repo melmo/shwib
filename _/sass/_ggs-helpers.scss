@@ -1,0 +1,82 @@
+/*=========================================
+
+	Default is single column split into 4
+	see http://goldengridsystem.com/
+	and http://seangoresht.com/index.php/tutorials/item/the-golden-gridlet-system-ggs-explained
+
+===========================================*/
+
+
+/*
+*
+*  Four-column grid active
+    up to 45em/720px
+*  ----------------------------------------
+*  Margin   | #  1   2   3   4   |   Margin
+*  5.55555% | %  25  50  75  100 | 5.55555%
+*
+*/
+
+
+/*=========================================
+
+	Media Queries
+	Start with mobile and build up
+
+===========================================*/
+
+@media (min-width: $navbarCollapseWidth) {
+	#inner-wrap {
+		padding-top: 60px;
+	}
+	.navbar-inner {
+		height: 2.6em;
+	}
+	//Hide drop down submenus on larger screens
+	.navbar ul ul {
+		display: none;
+		background: grey;
+		padding-left: 0;
+	}
+}
+
+
+/*
+*
+*  Eight-column grid active
+*  up to 117em/1872px
+*  ----------------------------------------------------------------------
+*  Margin   | #  1     2     3     4     5     6     7     8   |   Margin
+*  5.55555% | %  12.5  25.0  37.5  50.0  62.5  75.0  87.5  100 | 5.55555%
+*	
+*
+*/
+
+@media (min-width:45em) {
+	.core-feature {
+		@include column;
+		margin: 0 12.5% 3%;
+	}
+
+	.brand, .feature:first-child  {
+		margin-left: 12.5%;
+	}
+
+	.feature {
+		@include column;
+		width: 25%;
+	}
+
+}
+
+
+
+/*
+*
+*  Sixteen-column grid active
+*  ----------------------------------------------------------------------------------------------------------------------
+*  Margin   | #  1     2     3     4     5     6     7     8     9     10    11    12    13    14    15    16  |   Margin
+*  5.55555% | %  6.25  12.5  18.75 25.0  31.25 37.5  43.75 50.0  56.25 62.5  68.75 75.0  81.25 87.5  93.75 100 | 5.55555%
+*	
+*
+*/

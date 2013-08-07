@@ -163,18 +163,20 @@ ul li, ol li {
 	color: white;
 }
 
-.navbar-inner {
-	height: 41px;
-}
 
-ul.sub-menu {
-	height:0px;
-	overflow: hidden;
-	background: black;
-}
+@media (min-width: 768px) {
+	.navbar-inner {
+		height: 41px;
+	}
+	ul.sub-menu {
+		height:0px;
+		overflow: hidden;
+		background: black;
+	}
 
-li:hover ul.sub-menu {
-	height: auto;
+	li:hover ul.sub-menu {
+		height: auto;
+	}
 }
 
 

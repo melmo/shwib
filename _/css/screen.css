@@ -8516,47 +8516,48 @@ ul li, ol li {
   color: white;
 }
 
-/* line 166, ../sass/screen.scss */
-.navbar-inner {
-  height: 41px;
-}
+@media (min-width: 768px) {
+  /* line 168, ../sass/screen.scss */
+  .navbar-inner {
+    height: 41px;
+  }
 
-/* line 170, ../sass/screen.scss */
-ul.sub-menu {
-  height: 0px;
-  overflow: hidden;
-  background: black;
-}
+  /* line 171, ../sass/screen.scss */
+  ul.sub-menu {
+    height: 0px;
+    overflow: hidden;
+    background: black;
+  }
 
-/* line 176, ../sass/screen.scss */
-li:hover ul.sub-menu {
-  height: auto;
+  /* line 177, ../sass/screen.scss */
+  li:hover ul.sub-menu {
+    height: auto;
+  }
 }
-
 /*=========================================
 
 	Sticky Footer
 	http://css-tricks.com/snippets/css/sticky-footer/
 
 ===========================================*/
-/* line 188, ../sass/screen.scss */
+/* line 190, ../sass/screen.scss */
 html, body, #outer-wrap {
   height: 100%;
 }
 
-/* line 190, ../sass/screen.scss */
+/* line 192, ../sass/screen.scss */
 body > #outer-wrap {
   height: auto;
   min-height: 100%;
 }
 
-/* line 192, ../sass/screen.scss */
+/* line 194, ../sass/screen.scss */
 #inner-wrap {
   padding-bottom: 200px;
 }
 
 /* must be same height as the footer plus extra for space*/
-/* line 194, ../sass/screen.scss */
+/* line 196, ../sass/screen.scss */
 footer {
   position: relative;
   margin-top: -150px;

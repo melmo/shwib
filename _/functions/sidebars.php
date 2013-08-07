@@ -83,13 +83,13 @@ function hybrid_get_sidebars() {
 
 	/* Set up an array of sidebars. */
 	$sidebars = array(
-		'primary' => array(
-			'name'        => _x( 'Primary', 'sidebar', 'hybrid-core' ),
-			'description' => __( 'The main (primary) widget area, most often used as a sidebar.', 'hybrid-core' )
+		'pages' => array(
+			'name'        => _x( 'Pages', 'sidebar', 'hybrid-core' ),
+			'description' => __( 'The widget area used as a sidebar on pages.', 'hybrid-core' )
 		),
-		'secondary' => array(
-			'name'        => _x( 'Secondary', 'sidebar', 'hybrid-core' ),
-			'description' => __( 'The second most important widget area, most often used as a secondary sidebar.', 'hybrid-core' ),
+		'posts' => array(
+			'name'        => _x( 'Posts', 'sidebar', 'hybrid-core' ),
+			'description' => __( 'The widget area used as a sidebar on posts.', 'hybrid-core' ),
 		),
 		'subsidiary' => array(
 			'name'        => _x( 'Subsidiary', 'sidebar', 'hybrid-core' ),

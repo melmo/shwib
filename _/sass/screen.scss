@@ -168,14 +168,22 @@ ul li, ol li {
 	.navbar-inner {
 		height: 41px;
 	}
+
 	ul.sub-menu {
-		height:0px;
 		overflow: hidden;
 		background: black;
+		position: absolute;
+		max-height: 0px;
+		margin-top: 0;
+		white-space:nowrap;
+		opacity: 0;
+		@include transition(all 500ms ease-in);
+		top:100%;
 	}
 
 	li:hover ul.sub-menu {
-		height: auto;
+		max-height: 500px;
+		opacity: 1;
 	}
 }
 

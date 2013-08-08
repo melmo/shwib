@@ -384,7 +384,7 @@ function hybrid_document_title() {
 
 	/* Set up some default variables. */
 	$doctitle = '';
-	$separator = ':';
+	$separator = ' |';
 
 	/* If viewing the front page and posts page of the site. */
 	if ( is_front_page() && is_home() )

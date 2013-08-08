@@ -163,21 +163,24 @@ ul li, ol li {
 	color: white;
 }
 
+ul.sub-menu {
+	overflow: hidden;
+	max-height: 0px;
+	margin-top: 0;
+	white-space:nowrap;
+	opacity: 0;
+	@include transition(all 500ms ease-in);
+}
 
-@media (min-width: 768px) {
+
+@media (min-width: 980px) {
 	.navbar-inner {
 		height: 41px;
 	}
 
 	ul.sub-menu {
-		overflow: hidden;
 		background: black;
 		position: absolute;
-		max-height: 0px;
-		margin-top: 0;
-		white-space:nowrap;
-		opacity: 0;
-		@include transition(all 500ms ease-in);
 		top:100%;
 	}
 
@@ -185,6 +188,15 @@ ul li, ol li {
 		max-height: 500px;
 		opacity: 1;
 	}
+}
+
+@media (max-width: 979px) {
+
+	li.open ul.sub-menu {
+		max-height: 500px;
+		opacity: 1;
+	}
+
 }
 
 

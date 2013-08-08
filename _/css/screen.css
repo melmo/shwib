@@ -8516,30 +8516,41 @@ ul li, ol li {
   color: white;
 }
 
-@media (min-width: 768px) {
-  /* line 168, ../sass/screen.scss */
+/* line 166, ../sass/screen.scss */
+ul.sub-menu {
+  overflow: hidden;
+  max-height: 0px;
+  margin-top: 0;
+  white-space: nowrap;
+  opacity: 0;
+  -webkit-transition: all 500ms ease-in;
+  -moz-transition: all 500ms ease-in;
+  -o-transition: all 500ms ease-in;
+  transition: all 500ms ease-in;
+}
+
+@media (min-width: 980px) {
+  /* line 177, ../sass/screen.scss */
   .navbar-inner {
     height: 41px;
   }
 
-  /* line 172, ../sass/screen.scss */
+  /* line 181, ../sass/screen.scss */
   ul.sub-menu {
-    overflow: hidden;
     background: black;
     position: absolute;
-    max-height: 0px;
-    margin-top: 0;
-    white-space: nowrap;
-    opacity: 0;
-    -webkit-transition: all 500ms ease-in;
-    -moz-transition: all 500ms ease-in;
-    -o-transition: all 500ms ease-in;
-    transition: all 500ms ease-in;
     top: 100%;
   }
 
-  /* line 184, ../sass/screen.scss */
+  /* line 187, ../sass/screen.scss */
   li:hover ul.sub-menu {
+    max-height: 500px;
+    opacity: 1;
+  }
+}
+@media (max-width: 979px) {
+  /* line 195, ../sass/screen.scss */
+  li.open ul.sub-menu {
     max-height: 500px;
     opacity: 1;
   }
@@ -8550,24 +8561,24 @@ ul li, ol li {
 	http://css-tricks.com/snippets/css/sticky-footer/
 
 ===========================================*/
-/* line 198, ../sass/screen.scss */
+/* line 210, ../sass/screen.scss */
 html, body, #outer-wrap {
   height: 100%;
 }
 
-/* line 200, ../sass/screen.scss */
+/* line 212, ../sass/screen.scss */
 body > #outer-wrap {
   height: auto;
   min-height: 100%;
 }
 
-/* line 202, ../sass/screen.scss */
+/* line 214, ../sass/screen.scss */
 #inner-wrap {
   padding-bottom: 200px;
 }
 
 /* must be same height as the footer plus extra for space*/
-/* line 204, ../sass/screen.scss */
+/* line 216, ../sass/screen.scss */
 footer {
   position: relative;
   margin-top: -150px;

@@ -1,6 +1,6 @@
 <?php
 /* Load the core theme framework. */
-require_once( trailingslashit( TEMPLATEPATH ) . '/_/hybrid.php' );
+require_once( trailingslashit( TEMPLATEPATH ) . '/_/hybrid/hybrid.php' );
 $theme = new Hybrid();
 
 /* Do theme setup on the 'after_setup_theme' hook. */
@@ -22,13 +22,13 @@ function shwib_theme_setup() {
 	add_theme_support( 'hybrid-core-sidebars', array( 'pages', 'posts', 'header', 'subsidiary', 'after-singular' ) );
 	add_theme_support( 'hybrid-core-widgets' );
 	add_theme_support( 'hybrid-core-shortcodes' );
-	add_theme_support( 'hybrid-core-post-meta-box' );
-	add_theme_support( 'hybrid-core-theme-settings' );
+	//add_theme_support( 'hybrid-core-post-meta-box' );
+	//add_theme_support( 'hybrid-core-theme-settings' );
 	add_theme_support( 'hybrid-core-seo' );
 	add_theme_support( 'hybrid-core-template-hierarchy' );
 	add_theme_support( 'loop-pagination' );
 	// add_theme_support( 'get-the-image' );
-	add_theme_support( 'cleaner-gallery' );
+	//add_theme_support( 'cleaner-gallery' );
 	add_theme_support( 'automatic-feed-links' );
 	// add_custom_background();
 

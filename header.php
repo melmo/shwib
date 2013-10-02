@@ -9,8 +9,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title><?php hybrid_document_title(); ?></title>
         <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="<?php bloginfo('template_url');?>/style.css">
-        <script src="<?php bloginfo('template_url');?>/_/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <link rel="stylesheet" href="<?php bloginfo('template_url');?>/_/css/screen.css">
+        <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url');?>/_/img/favicon.ico" />
         <?php wp_head(); ?> 
     </head>
     <body class="<?php hybrid_body_class(); ?>">

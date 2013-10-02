@@ -53,7 +53,7 @@ if ( post_password_required() || ( !have_comments() && !comments_open() && !ping
 			<?php endif; ?>
 
 		</div><!-- #comments -->
-		<div class="pure-form pure-form-stacked">
+		<div class="">
 			<?php comment_form(); // Loads the comment form. ?>
 		</div>
 	</div><!-- .comments-wrap -->

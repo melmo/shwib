@@ -12,7 +12,9 @@
 get_header(); ?>
         <div class="container">
             
-            <div class="content">
+            <div class="row">
+            
+                <div class="content col-lg-8">
 
                         <div id="post-0" class="<?php hybrid_entry_class(); ?>">
 
@@ -32,8 +34,13 @@ get_header(); ?>
 
                         </div>
 
-            </div> <!--content-->
+                </div> <!--content-->
 
-            <?php get_template_part( 'sidebar-posts' ); ?>
+                <div class="col-lg-4">
+
+                    <?php get_template_part( 'sidebar-posts' ); ?>
+
+                </div>
+            </div> <!-- /row -->
         </div> <!-- /container -->
 <?php get_footer(); ?>

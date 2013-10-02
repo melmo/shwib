@@ -14,7 +14,7 @@
             <footer>
                 <div class="container">
                     <?php get_template_part( 'sidebar-subsidiary' ); ?>
-                    <p>&copy; Company 2012</p>
+                    <p class="copyright credits">&copy; Company 2012</p>
                 </div>
             </footer>      
         <?php wp_footer(); ?> 

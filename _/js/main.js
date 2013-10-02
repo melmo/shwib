@@ -1,5 +1,6 @@
 jQuery(document).ready(function($) {
-	$('#menu-primary-items .menu-parent-item').on("click", function(e) {
-		$(this).toggleClass("open");
+	$('#menu-primary-items .dropdown > a').on("click", function(e) {
+		e.preventDefault();
+		$(this).parent('li').toggleClass("open");
 	});
 });

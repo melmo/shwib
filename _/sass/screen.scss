@@ -1,11 +1,80 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*
+*
+* Bootstrap 3.0
+* 
+*
+*/
+
+// Core variables and mixins
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+// Reset
+@import "bootstrap/normalize";
+@import "bootstrap/print";
 
 
-@import "bootstrap/bootstrap";
-@import "bootstrap/responsive";
+/*
+*
+* Change variables like $font-family-base here
+* See _variables.scss for possibilities
+* See also http://www.awwwards.com/bootstrap-customization-themes-ui-patterns-and-tools.html
+* and http://bootswatch.com/
+* and http://www.bootstrapthemeroller.com/twitter-bootstrap-themeroller.html
+*
+*/
+
+
+/*
+*
+* Turn off what you don't need!
+*
+*
+*/ 
+
+// Core CSS
+@import "bootstrap/scaffolding";
+@import "bootstrap/type";
+@import "bootstrap/code";
+@import "bootstrap/grid";
+@import "bootstrap/tables";
+@import "bootstrap/forms";
+@import "bootstrap/buttons";
+
+// Components
+@import "bootstrap/component-animations";
+@import "bootstrap/glyphicons";
+@import "bootstrap/dropdowns";
+@import "bootstrap/button-groups";
+@import "bootstrap/input-groups";
+@import "bootstrap/navs";
+@import "bootstrap/navbar";
+@import "bootstrap/breadcrumbs";
+@import "bootstrap/pagination";
+@import "bootstrap/pager";
+@import "bootstrap/labels";
+@import "bootstrap/badges";
+@import "bootstrap/jumbotron";
+@import "bootstrap/thumbnails";
+@import "bootstrap/alerts";
+@import "bootstrap/progress-bars";
+@import "bootstrap/media";
+@import "bootstrap/list-group";
+@import "bootstrap/panels";
+@import "bootstrap/wells";
+@import "bootstrap/close";
+
+// Components w/ JavaScript
+@import "bootstrap/modals";
+@import "bootstrap/tooltip";
+@import "bootstrap/popovers";
+@import "bootstrap/carousel";
+
+// Utility classes
+@import "bootstrap/utilities";
+@import "bootstrap/responsive-utilities";
+
+
 @import "compass/css3";
 
 
@@ -14,18 +83,6 @@
 	Basic Styles
 
 ===========================================*/
-
-* { margin:0; padding:0; } 
-
-
-body {
-  margin: 0;
-  font-family: $baseFontFamily;
-  font-size: $baseFontSize;
-  line-height: $baseLineHeight;
-  color: $textColor;
-  background-color: $bodyBackground;
-}
 
 
 
@@ -36,88 +93,7 @@ body {
 
 ===========================================*/
 
-a {
-  color: $linkColor;
-  text-decoration: none;
-}
-a:hover,
-a:focus {
-  color: $linkColorHover;
-  text-decoration: underline;
-}
 
-menu, ol, ul  {
-  margin-left: 0;
-  padding-left: 0;
-}
-
-ol li, ul li {
-  margin-left: -2.5em;
-  padding-left: .5em;
-}
-
-
-h1 {
-  font-size: 2.5em;
-  line-height: 1.2em;
-}
-
-h2 {
-  font-size: 2.2em;
-  line-height: 1.5em;
-}
-
-h3 {
-  font-size: 1.5em;
-  line-height: 1.5em;
-}
-
-h4 {
-  font-size: 1.3em;
-  line-height: 1.5em;
-}
-
-h5 {
-  font-size: 1em;
-  line-height: 1.5em;
-  font-weight: bold;
-}
-
-h6 {
-  font-size: 1em;
-  line-height: 1.5em;
-  font-style:italic;
-  font-weight: normal;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	margin: 1em 0 .5em;
-}
-
-p {
-	margin: 0 0 1em;
-}
-
-hr {
-	height: 0px;
-	border:0px;
-	border-top: 1px solid #aaa;
-	border-bottom: 1px solid #ccc;
-	margin:.5em 0 1.5em;
-}
-
-fieldset {
-  margin-top: .5em;
-}
-
-blockquote {
-  border-left :.3em solid #aaa;
-  padding-left: .8em;
-}
-
-dd {
-  margin: 0;
-}
 
 
 /*=========================================
@@ -128,75 +104,33 @@ dd {
 ===========================================*/
 
 #inner-wrap {
-    padding-top: 60px;
+	padding-top: 50px;
 }
 
-@media (max-width: 979px) {
-	#inner-wrap {
-	    padding-top: 0px;
+.sub-menu {
+	@extend .dropdown-menu;
+}
+
+.nav > .dropdown > a {
+	&:after {
+		content : '';
+		@extend .caret;
+		margin-left: .5em;
+		border-top-color:$navbar-default-link-color;
+		border-bottom-color:$navbar-default-link-color; 
 	}
 }
 
-.current-menu-item {
-	@extend .active;
-}
-
-.nav ul, .nav ol {
-	list-style-type: none;
-}
-
-ul li, ol li {
-	margin-left: 0px;
-	padding-left: 0px;
-}
-
-.nav li a {
-	display: block;
-	float: none;
-	padding: 10px 15px 10px;
-	text-decoration: none;
-	color: #999999;
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-}
-
-.nav li a:hover {
-	color: white;
-}
-
-ul.sub-menu {
-	overflow: hidden;
-	max-height: 0px;
-	margin-top: 0;
-	white-space:nowrap;
-	opacity: 0;
-	@include transition(all 500ms ease-in);
-}
-
-
-@media (min-width: 980px) {
-	.navbar-inner {
-		height: 41px;
-	}
-
-	ul.sub-menu {
-		background: black;
-		position: absolute;
-		top:100%;
-	}
-
-	li:hover ul.sub-menu {
-		max-height: 500px;
-		opacity: 1;
+.nav > .dropdown > a:hover, .nav > .open > a {
+	&:after {
+		border-top-color:$navbar-default-link-hover-color;
+		border-bottom-color:$navbar-default-link-hover-color; 
 	}
 }
 
-@media (max-width: 979px) {
-
-	li.open ul.sub-menu {
-		max-height: 500px;
-		opacity: 1;
-	}
-
+.dropdown:hover .dropdown-menu {
+// Uncomment for drop down menus that work on hover
+//	display: block;
 }
 
 
@@ -211,21 +145,38 @@ html, body, #outer-wrap { height: 100%; }
 
 body > #outer-wrap {height: auto; min-height: 100%;}
 
-#inner-wrap { padding-bottom: 200px; }  /* must be same height as the footer plus extra for space*/
+#inner-wrap { padding-bottom: 100px; }  /* must be same height as the footer plus extra for space*/
 
 footer { 
     position: relative;
-	margin-top: -150px; /* negative value of footer height */
-	height: 150px;
+	margin-top: -50px; /* negative value of footer height */
+	height: 50px;
 	clear:both;
-	background: black;
+	background: $gray-darker;
 	color: white;
 	padding: 20px 20px;
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
-	
+	.copyright, .credits {
+		text-align: center;
+	}
 } 
 
 
+/*=========================================
 
+	Forms
+
+===========================================*/
+
+input[type=submit] {
+	@extend .btn;
+}
+
+
+/*=========================================
+
+	Comments
+
+===========================================*/

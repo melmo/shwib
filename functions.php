@@ -101,7 +101,7 @@ function add_menu_parent_class( $items ) {
 	
 	foreach ( $items as $item ) {
 		if ( in_array( $item->ID, $parents ) ) {
-			$item->classes[] = 'menu-parent-item'; 
+			$item->classes[] = 'dropdown'; 
 		}
 	}
 	

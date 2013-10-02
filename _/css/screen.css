@@ -2092,24 +2092,24 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 }
 
 /* line 57, ../sass/bootstrap/_mixins.scss */
-.form-control:-moz-placeholder {
+.form-control:-moz-placeholder, input[type=text]:-moz-placeholder, input[type=email]:-moz-placeholder, input[type=password]:-moz-placeholder, input[type=url]:-moz-placeholder, textarea:-moz-placeholder, select:-moz-placeholder {
   color: #999999;
 }
 /* line 58, ../sass/bootstrap/_mixins.scss */
-.form-control::-moz-placeholder {
+.form-control::-moz-placeholder, input[type=text]::-moz-placeholder, input[type=email]::-moz-placeholder, input[type=password]::-moz-placeholder, input[type=url]::-moz-placeholder, textarea::-moz-placeholder, select::-moz-placeholder {
   color: #999999;
 }
 /* line 59, ../sass/bootstrap/_mixins.scss */
-.form-control:-ms-input-placeholder {
+.form-control:-ms-input-placeholder, input[type=text]:-ms-input-placeholder, input[type=email]:-ms-input-placeholder, input[type=password]:-ms-input-placeholder, input[type=url]:-ms-input-placeholder, textarea:-ms-input-placeholder, select:-ms-input-placeholder {
   color: #999999;
 }
 /* line 60, ../sass/bootstrap/_mixins.scss */
-.form-control::-webkit-input-placeholder {
+.form-control::-webkit-input-placeholder, input[type=text]::-webkit-input-placeholder, input[type=email]::-webkit-input-placeholder, input[type=password]::-webkit-input-placeholder, input[type=url]::-webkit-input-placeholder, textarea::-webkit-input-placeholder, select::-webkit-input-placeholder {
   color: #999999;
 }
 
 /* line 117, ../sass/bootstrap/_forms.scss */
-.form-control {
+.form-control, input[type=text], input[type=email], input[type=password], input[type=url], textarea, select {
   display: block;
   width: 100%;
   height: 34px;
@@ -2127,20 +2127,20 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 /* line 702, ../sass/bootstrap/_mixins.scss */
-.form-control:focus {
+.form-control:focus, input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, input[type=url]:focus, textarea:focus, select:focus {
   border-color: #66afe9;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 /* line 141, ../sass/bootstrap/_forms.scss */
-.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+.form-control[disabled], input[disabled][type=text], input[disabled][type=email], input[disabled][type=password], input[disabled][type=url], textarea[disabled], select[disabled], .form-control[readonly], input[readonly][type=text], input[readonly][type=email], input[readonly][type=password], input[readonly][type=url], textarea[readonly], select[readonly], fieldset[disabled] .form-control, fieldset[disabled] input[type=text], fieldset[disabled] input[type=email], fieldset[disabled] input[type=password], fieldset[disabled] input[type=url], fieldset[disabled] textarea, fieldset[disabled] select {
   cursor: not-allowed;
   background-color: #eeeeee;
 }
 
 /* line 150, ../sass/bootstrap/_forms.scss */
-textarea.form-control {
+textarea.form-control, textarea {
   height: auto;
 }
 
@@ -2217,7 +2217,7 @@ input[type="checkbox"],
 }
 
 /* line 717, ../sass/bootstrap/_mixins.scss */
-.input-sm, .input-group-sm > .form-control,
+.input-sm, .input-group-sm > .form-control, .input-group-sm > input[type=text], .input-group-sm > input[type=email], .input-group-sm > input[type=password], .input-group-sm > input[type=url], .input-group-sm > textarea, .input-group-sm > select,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn,
 .input-group-sm > .input-group-btn > input[type=submit] {
@@ -2229,7 +2229,7 @@ input[type="checkbox"],
 }
 
 /* line 722, ../sass/bootstrap/_mixins.scss */
-select.input-sm, .input-group-sm > select.form-control,
+select.input-sm, .input-group-sm > select,
 .input-group-sm > select.input-group-addon,
 .input-group-sm > .input-group-btn > select.btn {
   height: 30px;
@@ -2237,14 +2237,14 @@ select.input-sm, .input-group-sm > select.form-control,
 }
 
 /* line 727, ../sass/bootstrap/_mixins.scss */
-textarea.input-sm, .input-group-sm > textarea.form-control,
+textarea.input-sm, .input-group-sm > textarea,
 .input-group-sm > textarea.input-group-addon,
 .input-group-sm > .input-group-btn > textarea.btn {
   height: auto;
 }
 
 /* line 717, ../sass/bootstrap/_mixins.scss */
-.input-lg, .input-group-lg > .form-control,
+.input-lg, .input-group-lg > .form-control, .input-group-lg > input[type=text], .input-group-lg > input[type=email], .input-group-lg > input[type=password], .input-group-lg > input[type=url], .input-group-lg > textarea, .input-group-lg > select,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn,
 .input-group-lg > .input-group-btn > input[type=submit] {
@@ -2256,7 +2256,7 @@ textarea.input-sm, .input-group-sm > textarea.form-control,
 }
 
 /* line 722, ../sass/bootstrap/_mixins.scss */
-select.input-lg, .input-group-lg > select.form-control,
+select.input-lg, .input-group-lg > select,
 .input-group-lg > select.input-group-addon,
 .input-group-lg > .input-group-btn > select.btn {
   height: 45px;
@@ -2264,7 +2264,7 @@ select.input-lg, .input-group-lg > select.form-control,
 }
 
 /* line 727, ../sass/bootstrap/_mixins.scss */
-textarea.input-lg, .input-group-lg > textarea.form-control,
+textarea.input-lg, .input-group-lg > textarea,
 .input-group-lg > textarea.input-group-addon,
 .input-group-lg > .input-group-btn > textarea.btn {
   height: auto;
@@ -2276,13 +2276,13 @@ textarea.input-lg, .input-group-lg > textarea.form-control,
   color: #c09853;
 }
 /* line 670, ../sass/bootstrap/_mixins.scss */
-.has-warning .form-control {
+.has-warning .form-control, .has-warning input[type=text], .has-warning input[type=email], .has-warning input[type=password], .has-warning input[type=url], .has-warning textarea, .has-warning select {
   border-color: #c09853;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 /* line 673, ../sass/bootstrap/_mixins.scss */
-.has-warning .form-control:focus {
+.has-warning .form-control:focus, .has-warning input[type=text]:focus, .has-warning input[type=email]:focus, .has-warning input[type=password]:focus, .has-warning input[type=url]:focus, .has-warning textarea:focus, .has-warning select:focus {
   border-color: #a47e3c;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #dbc59e;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #dbc59e;
@@ -2300,13 +2300,13 @@ textarea.input-lg, .input-group-lg > textarea.form-control,
   color: #b94a48;
 }
 /* line 670, ../sass/bootstrap/_mixins.scss */
-.has-error .form-control {
+.has-error .form-control, .has-error input[type=text], .has-error input[type=email], .has-error input[type=password], .has-error input[type=url], .has-error textarea, .has-error select {
   border-color: #b94a48;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 /* line 673, ../sass/bootstrap/_mixins.scss */
-.has-error .form-control:focus {
+.has-error .form-control:focus, .has-error input[type=text]:focus, .has-error input[type=email]:focus, .has-error input[type=password]:focus, .has-error input[type=url]:focus, .has-error textarea:focus, .has-error select:focus {
   border-color: #953b39;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392;
@@ -2324,13 +2324,13 @@ textarea.input-lg, .input-group-lg > textarea.form-control,
   color: #468847;
 }
 /* line 670, ../sass/bootstrap/_mixins.scss */
-.has-success .form-control {
+.has-success .form-control, .has-success input[type=text], .has-success input[type=email], .has-success input[type=password], .has-success input[type=url], .has-success textarea, .has-success select {
   border-color: #468847;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 /* line 673, ../sass/bootstrap/_mixins.scss */
-.has-success .form-control:focus {
+.has-success .form-control:focus, .has-success input[type=text]:focus, .has-success input[type=email]:focus, .has-success input[type=password]:focus, .has-success input[type=url]:focus, .has-success textarea:focus, .has-success select:focus {
   border-color: #356635;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b;
@@ -2364,7 +2364,7 @@ textarea.input-lg, .input-group-lg > textarea.form-control,
     vertical-align: middle;
   }
   /* line 300, ../sass/bootstrap/_forms.scss */
-  .form-inline .form-control, .navbar-form .form-control {
+  .form-inline .form-control, .navbar-form .form-control, .form-inline input[type=text], .navbar-form input[type=text], .form-inline input[type=email], .navbar-form input[type=email], .form-inline input[type=password], .navbar-form input[type=password], .form-inline input[type=url], .navbar-form input[type=url], .form-inline textarea, .navbar-form textarea, .form-inline select, .navbar-form select {
     display: inline-block;
   }
   /* line 308, ../sass/bootstrap/_forms.scss */
@@ -4215,7 +4215,7 @@ input[type="button"].btn-block {
   padding-right: 0;
 }
 /* line 19, ../sass/bootstrap/_input-groups.scss */
-.input-group .form-control {
+.input-group .form-control, .input-group input[type=text], .input-group input[type=email], .input-group input[type=password], .input-group input[type=url], .input-group textarea, .input-group select {
   width: 100%;
   margin-bottom: 0;
 }
@@ -4223,13 +4223,25 @@ input[type="button"].btn-block {
 /* line 42, ../sass/bootstrap/_input-groups.scss */
 .input-group-addon,
 .input-group-btn,
-.input-group .form-control {
+.input-group .form-control,
+.input-group input[type=text],
+.input-group input[type=email],
+.input-group input[type=password],
+.input-group input[type=url],
+.input-group textarea,
+.input-group select {
   display: table-cell;
 }
 /* line 45, ../sass/bootstrap/_input-groups.scss */
 .input-group-addon:not(:first-child):not(:last-child),
 .input-group-btn:not(:first-child):not(:last-child),
-.input-group .form-control:not(:first-child):not(:last-child) {
+.input-group .form-control:not(:first-child):not(:last-child),
+.input-group input[type=text]:not(:first-child):not(:last-child),
+.input-group input[type=email]:not(:first-child):not(:last-child),
+.input-group input[type=password]:not(:first-child):not(:last-child),
+.input-group input[type=url]:not(:first-child):not(:last-child),
+.input-group textarea:not(:first-child):not(:last-child),
+.input-group select:not(:first-child):not(:last-child) {
   border-radius: 0;
 }
 
@@ -4275,7 +4287,7 @@ input[type="button"].btn-block {
 }
 
 /* line 93, ../sass/bootstrap/_input-groups.scss */
-.input-group .form-control:first-child,
+.input-group .form-control:first-child, .input-group input[type=text]:first-child, .input-group input[type=email]:first-child, .input-group input[type=password]:first-child, .input-group input[type=url]:first-child, .input-group textarea:first-child, .input-group select:first-child,
 .input-group-addon:first-child,
 .input-group-btn:first-child > .btn,
 .input-group-btn:first-child > input[type=submit],
@@ -4292,7 +4304,7 @@ input[type="button"].btn-block {
 }
 
 /* line 103, ../sass/bootstrap/_input-groups.scss */
-.input-group .form-control:last-child,
+.input-group .form-control:last-child, .input-group input[type=text]:last-child, .input-group input[type=email]:last-child, .input-group input[type=password]:last-child, .input-group input[type=url]:last-child, .input-group textarea:last-child, .input-group select:last-child,
 .input-group-addon:last-child,
 .input-group-btn:last-child > .btn,
 .input-group-btn:last-child > input[type=submit],
@@ -7591,8 +7603,49 @@ footer .copyright, footer .credits {
 	Forms
 
 ===========================================*/
+/* line 181, ../sass/screen.scss */
+.required {
+  color: #f0ad4e;
+}
+
 /*=========================================
 
 	Comments
 
 ===========================================*/
+/* line 192, ../sass/screen.scss */
+.comment-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+/* line 195, ../sass/screen.scss */
+.comment-list ol {
+  padding-left: 2em;
+  list-style-type: none;
+}
+/* line 199, ../sass/screen.scss */
+.comment-list li {
+  padding: 1em;
+}
+/* line 202, ../sass/screen.scss */
+.comment-list li.odd {
+  background: #eeeeee;
+}
+/* line 205, ../sass/screen.scss */
+.comment-list li.even {
+  background: white;
+}
+/* line 208, ../sass/screen.scss */
+.comment-list .comment-image {
+  float: left;
+  margin: 0 1em 1em 0;
+}
+/* line 212, ../sass/screen.scss */
+.comment-list .comment-meta {
+  padding-top: 1em;
+}
+/* line 215, ../sass/screen.scss */
+.comment-list .comment-text {
+  clear: both;
+  padding-bottom: 1em;
+}

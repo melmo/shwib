@@ -174,9 +174,46 @@ input[type=submit] {
 	@extend .btn;
 }
 
+input[type=text], input[type=email], input[type=password], input[type=url], textarea, select {
+	@extend .form-control;
+}
+
+.required {
+	color: $brand-warning;
+}
+
 
 /*=========================================
 
 	Comments
 
 ===========================================*/
+
+.comment-list {
+	list-style-type: none;
+	padding-left: 0;
+	ol {
+		padding-left: 2em;
+		list-style-type: none;
+	}
+	li {
+		padding: 1em;
+	}
+	li.odd {
+		background: $gray-lighter;
+	}
+	li.even {
+		background: white;
+	}
+	.comment-image {
+		float: left;
+		margin: 0 1em 1em 0;
+	}
+	.comment-meta {
+		padding-top: 1em;
+	}
+	.comment-text {
+		clear: both;
+		padding-bottom: 1em;
+	}
+}

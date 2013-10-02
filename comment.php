@@ -19,9 +19,9 @@
 
 			<?php do_atomic( 'open_comment' ); // shwib_open_comment ?>
 
-			<?php echo hybrid_avatar(); ?>
+			<div class="comment-image"><?php echo hybrid_avatar(); ?></div>
 
-			<?php echo apply_atomic_shortcode( 'comment_meta', '<div class="comment-meta">[comment-author] [comment-published] [comment-permalink before="| "] [comment-edit-link before="| "] [comment-reply-link before="| "]</div>' ); // shwib_comment_meta ?>
+			<?php echo apply_atomic_shortcode( 'comment_meta', '<div class="comment-meta">[comment-author] <br> [comment-published] <br> [comment-permalink] [comment-edit-link before="| "] [comment-reply-link before="| "]</div>' ); // shwib_comment_meta ?>
 
 			<div class="comment-content comment-text">
 				<?php if ( '0' == $comment->comment_approved ) : ?>

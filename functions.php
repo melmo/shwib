@@ -30,6 +30,7 @@ function shwib_theme_setup() {
 	add_theme_support( 'loop-pagination' );
 	// add_theme_support( 'get-the-image' );
 	//add_theme_support( 'cleaner-gallery' );
+	add_theme_support('post_thumbnails');
 	add_theme_support( 'automatic-feed-links' );
 	// add_custom_background();
 

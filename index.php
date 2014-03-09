@@ -38,9 +38,9 @@ get_header(); ?>
 
                             </div>
 
-                        <?php get_template_part( 'loop-nav' ); ?>
-
                         <?php endwhile; ?>
+                        
+                        <?php get_template_part( 'loop-nav' ); ?>
 
                     <?php else : ?>
 

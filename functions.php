@@ -85,7 +85,7 @@ function shwib_add_scripts() {
 add_action( 'wp_footer', 'content_bump' );
 
 function content_bump() {
-	if(is_user_logged_in()) echo "<style>.navbar-fixed-top {top: 28px;}</style>";
+	if(is_user_logged_in()) echo "<style>.navbar-fixed-top {top: 32px;}@media screen and (max-width: 782px){.navbar-fixed-top {top: 46px;}}</style>";
 }
 
 

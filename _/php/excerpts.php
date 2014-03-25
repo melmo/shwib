@@ -96,6 +96,7 @@ function shwib_the_excerpt_max_charlength($charlength) {
 
 function shwib_image() {
 	global $post;
+	$image ='';
 	if ( is_singular() && empty($image) && has_post_thumbnail($post->ID) ) {
 		$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'post-thumbnail');
 		if ($thumbnail) {

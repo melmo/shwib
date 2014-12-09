@@ -39,8 +39,8 @@ function shwib_theme_setup() {
 function shwib_additional_setup() {
 	// Additional widget classes with number of each widget position and first/last widget class.
 	require_once( trailingslashit( TEMPLATEPATH ) . '/_/php/widget-classes.php' );
-	// Apple Touch Icons
-	require_once( trailingslashit( TEMPLATEPATH ) . '/_/php/apple-touch-icons.php' );
+	// Favicon and App Icons
+	require_once( trailingslashit( TEMPLATEPATH ) . '/_/php/app-icons.php' );
 	// Better excerpt handling - required for Facebook open graph tags
 	require_once( trailingslashit( TEMPLATEPATH ) . '/_/php/excerpts.php' );
 	// Loop Meta

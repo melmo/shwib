@@ -13,7 +13,7 @@ get_header(); ?>
 
             <div class="row">
             
-                <div class="content col-lg-8">
+                <div class="col-sm-12">
 
                     <?php if (!is_singular() ){ get_template_part( 'loop-meta' ); }  ?>
 
@@ -21,11 +21,16 @@ get_header(); ?>
 
                         <?php while ( have_posts() ) : the_post(); ?>
 
-                            <div id="post-<?php the_ID(); ?>" class="<?php hybrid_entry_class(); ?>">
+                            <div <?php hybrid_attr( 'content' ); ?>>
 
-                                <?php echo apply_atomic_shortcode( 'entry_title', '[entry-title]' ); ?>
+                                <a href="<?php the_permalink();?>"><h1 <?php echo hybrid_get_attr( 'entry-title' ); ?>><?php the_title();?></h1></a>
 
-                                <?php echo apply_atomic_shortcode( 'byline', '<div class="byline">' . __( 'By [entry-author] on [entry-published]', 'shwib' ) . '</div>' ); ?>
+                                <div class="entry-byline">
+                                    <span <?php hybrid_attr( 'entry-author' ); ?>><?php the_author_posts_link(); ?></span>
+                                    <time <?php hybrid_attr( 'entry-published' ); ?>><?php echo get_the_date(); ?></time>
+                                    <?php comments_popup_link( number_format_i18n( 0 ), number_format_i18n( 1 ), '% Comments', 'comments-link', '' ); ?>
+                                    <?php edit_post_link(); ?>
+                                </div><!-- .entry-byline -->
 
                                 <div class="entry-content">
                                     <?php the_post_thumbnail(); ?>
@@ -34,27 +39,24 @@ get_header(); ?>
 
                                 </div><!-- .entry-content -->
 
-                                <?php echo apply_atomic_shortcode( 'entry_meta', '<div class="entry-meta">' . __( '[entry-terms taxonomy="category" before="Posted in "] [entry-terms taxonomy="post_tag" before="| Tagged "]', 'shwib' ) . '</div>' ); ?>
-
+                                <footer class="entry-footer">
+                                    <?php hybrid_post_terms( array( 'taxonomy' => 'category', 'text' => __( 'Posted in %s', 'hybrid-base' ) ) ); ?>
+                                    <?php hybrid_post_terms( array( 'taxonomy' => 'post_tag', 'text' => __( 'Tagged %s', 'hybrid-base' ), 'before' => '<br />' ) ); ?>
+                                </footer><!-- .entry-footer -->
                             </div>
 
                         <?php endwhile; ?>
                         
-                        <?php get_template_part( 'loop-nav' ); ?>
+                        <?php get_template_part( 'loop/loop-nav' ); ?>
 
                     <?php else : ?>
 
-                        <?php get_template_part( 'loop-error' ); ?>
+                        <?php get_template_part( 'loop/loop-error' ); ?>
 
                     <?php endif; ?>
 
                 </div> <!--content-->
 
-                <div class="col-lg-4">
-
-                    <?php get_template_part( 'sidebar-posts' ); ?>
-
-                </div>
             </div> <!-- /row -->
         </div> <!-- /container -->
 <?php get_footer(); ?>

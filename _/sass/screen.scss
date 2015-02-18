@@ -16,17 +16,6 @@
 
 /*
 *
-* Change variables like $font-family-base here
-* See _variables.scss for possibilities
-* See also http://www.awwwards.com/bootstrap-customization-themes-ui-patterns-and-tools.html
-* and http://bootswatch.com/
-* and http://www.bootstrapthemeroller.com/twitter-bootstrap-themeroller.html
-*
-*/
-
-
-/*
-*
 * Turn off what you don't need!
 *
 *
@@ -43,7 +32,6 @@
 
 // Components
 @import "bootstrap/component-animations";
-@import "bootstrap/glyphicons";
 @import "bootstrap/dropdowns";
 @import "bootstrap/button-groups";
 @import "bootstrap/input-groups";
@@ -61,6 +49,7 @@
 @import "bootstrap/media";
 @import "bootstrap/list-group";
 @import "bootstrap/panels";
+@import "bootstrap/responsive-embed";
 @import "bootstrap/wells";
 @import "bootstrap/close";
 
@@ -76,6 +65,147 @@
 
 
 @import "compass/css3";
+
+/*=========================================
+
+	Accessibility
+
+===========================================*/
+
+
+.skip-nav a {
+	position:fixed;
+	top:0px;
+	bottom:0px;
+	height:0;
+	width:0;
+	overflow:hidden;
+}
+
+.skip-nav a:focus {
+	overflow:visible;
+	background:black;
+	padding:5px;
+	color:white;
+	display:block;
+	position: static;
+	width:100%;
+	height:auto;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+/*=========================================
+
+	Wordpress Core
+
+===========================================*/
+
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
 
 
 /*=========================================
@@ -147,7 +277,7 @@ body > #outer-wrap {height: auto; min-height: 100%;}
 
 #inner-wrap { padding-bottom: 100px; }  /* must be same height as the footer plus extra for space*/
 
-footer { 
+#footer { 
     position: relative;
 	margin-top: -50px; /* negative value of footer height */
 	height: 50px;
@@ -189,10 +319,10 @@ input[type=text], input[type=email], input[type=password], input[type=url], text
 
 ===========================================*/
 
-.comment-list {
+.commentlist {
 	list-style-type: none;
 	padding-left: 0;
-	ol {
+	ol, ul {
 		padding-left: 2em;
 		list-style-type: none;
 	}

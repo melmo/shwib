@@ -13,34 +13,25 @@ get_header(); ?>
         <div class="container">
             
             <div class="row">
+                <div class=" col-sm-12">
             
-                <div class="content col-lg-8">
+                    <div <?php hybrid_attr( 'content' ); ?> >
 
-                        <div id="post-0" class="<?php hybrid_entry_class(); ?>">
+                        <h1 class="error-404-title entry-title"><?php _e( 'Not Found', 'shwib' ); ?></h1>
 
-                            <h1 class="error-404-title entry-title"><?php _e( 'Not Found', 'shwib' ); ?></h1>
+                        <div class="entry-content">
 
-                            <div class="entry-content">
+                            <p>
+                                <?php printf( __( 'You tried going to %1$s, and it doesn\'t exist. All is not lost! You can search for what you\'re looking for.', 'shwib' ), home_url( esc_url( $_SERVER['REQUEST_URI'] ) ) ); ?>
+                            </p>
 
-                                <p>
-                                    <?php printf( __( 'You tried going to %1$s, and it doesn\'t exist. All is not lost! You can search for what you\'re looking for.', 'shwib' ), '<code>' . home_url( esc_url( $_SERVER['REQUEST_URI'] ) ) . '</code>' ); ?>
-                                </p>
+                            <?php get_search_form(); // Loads the searchform.php template. ?>
 
-                                <?php get_search_form(); // Loads the searchform.php template. ?>
+                        </div><!-- .entry-content -->
 
-                            </div><!-- .entry-content -->
+                    </div> 
+                </div><!--/col-->
 
-                            <?php echo apply_atomic_shortcode( 'entry_meta', '<div class="entry-meta">' . __( '[entry-terms taxonomy="category" before="Posted in "] [entry-terms taxonomy="post_tag" before="| Tagged "]', 'shwib' ) . '</div>' ); ?>
-
-                        </div>
-
-                </div> <!--content-->
-
-                <div class="col-lg-4">
-
-                    <?php get_template_part( 'sidebar-posts' ); ?>
-
-                </div>
             </div> <!-- /row -->
         </div> <!-- /container -->
 <?php get_footer(); ?>

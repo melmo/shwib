@@ -70,8 +70,6 @@ function shwib_loop_meta_title(){
 	elseif ( is_search() )
 		$current = esc_attr( get_search_query() );
 
-	/* Filter it */
-	$current = apply_atomic( 'loop_meta_title', $current );
 
 	/* Format title */
 	if ( !empty( $current ) ){
@@ -128,8 +126,6 @@ function shwib_loop_meta_description(){
 		}
 	}
 
-	/* Filter it */
-	$description = apply_atomic( 'loop_meta_description', $description );
 
 	/* loop description. */
 	if ( !empty( $description ) ){

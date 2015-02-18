@@ -11,10 +11,10 @@
 ?>
         </div> <!--#innerwrap-->
             </div> <!--#outerwrap-->
-            <footer>
+            <footer id="footer">
                 <div class="container">
                     <?php get_template_part( 'sidebar-subsidiary' ); ?>
-                    <p class="copyright credits">&copy; Company 2012</p>
+                    <p class="copyright credits">&copy; Company <?php echo date ( 'Y' ); ?></p>
                 </div>
             </footer>      
         <?php wp_footer(); ?> 

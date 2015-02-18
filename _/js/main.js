@@ -9,3 +9,10 @@ jQuery(document).ready(function($) {
 		}
 	});
 });
+
+jQuery(document).ready(function($) {
+	//add logical tab index
+	$('a, input, select, button, textarea').each(function(i) {
+		$(this).attr('tabindex',i+1);
+	});
+});

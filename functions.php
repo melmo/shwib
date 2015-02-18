@@ -1,4 +1,11 @@
 <?php
+/* Sets the path to the core framework directory. */
+if ( !defined( 'HYBRID_DIR' ) )
+	define( 'HYBRID_DIR', trailingslashit( TEMPLATEPATH ) . '/_/hybrid/' );
+
+/* Sets the path to the core framework directory URI. */
+if ( !defined( 'HYBRID_URI' ) )
+	define( 'HYBRID_URI', trailingslashit( TEMPLATEPATH ) . '/_/hybrid/hybrid.php' );
 /* Load the core theme framework. */
 require_once( trailingslashit( TEMPLATEPATH ) . '/_/hybrid/hybrid.php' );
 $theme = new Hybrid();
@@ -19,20 +26,20 @@ function shwib_theme_setup() {
 	$prefix = hybrid_get_prefix();
 
 	/* Add theme support for core framework features. */
-	add_theme_support( 'hybrid-core-menus', array( 'primary', 'secondary', 'subsidiary' ) );
-	add_theme_support( 'hybrid-core-sidebars', array( 'pages', 'posts', 'header', 'subsidiary', 'after-singular' ) );
 	add_theme_support( 'hybrid-core-widgets' );
-	add_theme_support( 'hybrid-core-shortcodes' );
-	//add_theme_support( 'hybrid-core-post-meta-box' );
-	//add_theme_support( 'hybrid-core-theme-settings' );
-	add_theme_support( 'hybrid-core-seo' );
 	add_theme_support( 'hybrid-core-template-hierarchy' );
 	add_theme_support( 'loop-pagination' );
-	// add_theme_support( 'get-the-image' );
-	//add_theme_support( 'cleaner-gallery' );
-	add_theme_support('post-thumbnails');
+	add_theme_support( 'get-the-image' );	
+	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'automatic-feed-links' );
+	add_theme_support( 'cleaner-caption' );
+	add_theme_support( 'cleaner-gallery' );
+
 	// add_custom_background();
+	// add_theme_support( 'breadcrumb-trail' );
+	// add_theme_support( 'hybrid-core-post-meta-box' );
+	// add_theme_support( 'hybrid-core-theme-settings' );
+	// add_theme_support( 'hybrid-core-seo' );
 
 }
 
@@ -51,6 +58,40 @@ function shwib_additional_setup() {
 	require_once( trailingslashit( TEMPLATEPATH ) . '/_/php/twitter-cards.php' );
 }
 
+/* Register custom menus. */
+add_action( 'init', 'shwib_register_menus', 5 );
+
+
+function shwib_register_menus() {
+	register_nav_menu( 'primary',    _x( 'Primary',    'nav menu location', 'hybrid-base' ) );
+	register_nav_menu( 'secondary',  _x( 'Secondary',  'nav menu location', 'hybrid-base' ) );
+	register_nav_menu( 'subsidiary', _x( 'Subsidiary', 'nav menu location', 'hybrid-base' ) );
+}
+
+
+
+/* Register sidebars. */
+add_action( 'widgets_init', 'shwib_register_sidebars', 5 );
+
+function shwib_register_sidebars() {
+
+	hybrid_register_sidebar(
+		array(
+			'id'          => 'posts',
+			'name'        => _x( 'Posts', 'sidebar', 'shwib' ),
+			'description' => __( 'Shown on posts and blog index.', 'shwib' )
+		)
+	);
+
+	hybrid_register_sidebar(
+		array(
+			'id'          => 'pages',
+			'name'        => _x( 'Pages', 'sidebar', 'shwib' ),
+			'description' => __( 'Shown on pages.', 'shwib' )
+		)
+	);
+}
+
 
 /**
  * Enqueue additional scripts here.
@@ -62,10 +103,6 @@ add_action('wp_enqueue_scripts', 'shwib_add_scripts');
 
 function shwib_add_scripts() {
 
-  	wp_enqueue_script('modernizr',
-       get_template_directory_uri() . '/_/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js',
-       false,
-       '2.6.2' );
    	wp_enqueue_script('bootstrap',
        get_template_directory_uri() . '/_/js/vendor/bootstrap.min.js',
        array("jquery"),

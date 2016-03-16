@@ -84,7 +84,7 @@ function opengraph_default_title( $title ) {
 		$title = $post->post_title;
 	}
 
-	return $title;
+	return wp_title(" |", false);
 }
 
 
@@ -156,5 +156,6 @@ function opengraph_meta_tags() {
 		echo '<meta ' . $xml_ns . 'property="' . esc_attr($key) . '" content="' . esc_attr($value) . '" />' . "\n";
 		
 	}
+	echo '<meta name="description" content="' . shwib_description() . '">';
 	
 }

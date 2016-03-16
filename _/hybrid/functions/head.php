@@ -55,7 +55,7 @@ function hybrid_meta_charset() {
  * @return void
  */
 function hybrid_doctitle() {
-	?><title><?php wp_title( ':' ); ?></title>
+	?><title><?php wp_title( ' |' ); ?></title>
 <?php }
 
 /**

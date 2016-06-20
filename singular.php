@@ -41,13 +41,14 @@
                                 </footer><!-- .entry-footer -->
                             </div>
 
-                            <?php get_template_part( 'loop/loop-nav' ); ?>
-
-                            <?php get_template_part( 'sidebars/sidebar-after-singular' ); ?>
-
-                            <?php comments_template( 'comments/comments.php', true ); // Loads the comments.php template. ?>
-
+                            
                         <?php endwhile; ?>
+
+                        <?php get_template_part( 'loop/loop-nav' ); ?>
+
+                        <?php get_template_part( 'sidebars/sidebar-after-singular' ); ?>
+
+                        <?php comments_template( 'comments/comments.php', true ); // Loads the comments.php template. ?>
 
                     <?php else : ?>
 

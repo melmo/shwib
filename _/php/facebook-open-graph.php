@@ -156,6 +156,6 @@ function opengraph_meta_tags() {
 		echo '<meta ' . $xml_ns . 'property="' . esc_attr($key) . '" content="' . esc_attr($value) . '" />' . "\n";
 		
 	}
-	echo '<meta name="description" content="' . shwib_description() . '">';
+	echo '<meta name="description" content="' . esc_attr(shwib_description()) . '">';
 	
 }

@@ -233,13 +233,6 @@ a img.aligncenter {
 	padding-top: 50px;
 }
 
-.sub-menu {
-	@extend .dropdown-menu;
-}
-
-.sub-menu > .menu-item {
-	@extend .dropdown-item;
-}
 
 .nav > .dropdown > a {
 	&:after {
@@ -273,11 +266,30 @@ a img.aligncenter {
 	@extend .nav-link;
 }
 
-.dropdown:hover .dropdown-menu {
-// Uncomment for drop down menus that work on hover
-//	display: block;
-}
+@include media-breakpoint-down(sm) {
+	.navbar {
 
+		.navbar-nav .nav-item, .navbar-nav .menu-item {
+			float: none;
+		}
+
+		.nav-item + .nav-item {
+			margin-left: 0;
+		}
+
+		.dropdown {
+			position: initial;
+		}
+
+		.dropdown-menu {
+			position: initial;
+			z-index: initial;
+			float: initial;
+			border: initial;
+			border-radius: initial;
+		}
+	}
+}
 
 /*=========================================
 

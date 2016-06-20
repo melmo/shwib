@@ -2877,7 +2877,7 @@ input[type="button"].btn-block {
   border-bottom: 0.3em solid;
 }
 
-.dropdown-menu, .sub-menu {
+.dropdown-menu {
   position: absolute;
   top: 100%;
   left: 0;
@@ -2904,7 +2904,7 @@ input[type="button"].btn-block {
   background-color: #e5e5e5;
 }
 
-.dropdown-item, .sub-menu > .menu-item {
+.dropdown-item {
   display: block;
   width: 100%;
   padding: 3px 20px;
@@ -2917,21 +2917,21 @@ input[type="button"].btn-block {
   background: none;
   border: 0;
 }
-.dropdown-item:focus, .sub-menu > .menu-item:focus, .dropdown-item:hover, .sub-menu > .menu-item:hover {
+.dropdown-item:focus, .dropdown-item:hover {
   color: #2b2d2f;
   text-decoration: none;
   background-color: #f5f5f5;
 }
-.dropdown-item.active, .sub-menu > .active.menu-item, .dropdown-item.active:focus, .sub-menu > .active.menu-item:focus, .dropdown-item.active:hover, .sub-menu > .active.menu-item:hover {
+.dropdown-item.active, .dropdown-item.active:focus, .dropdown-item.active:hover {
   color: #fff;
   text-decoration: none;
   background-color: #0275d8;
   outline: 0;
 }
-.dropdown-item.disabled, .sub-menu > .disabled.menu-item, .dropdown-item.disabled:focus, .sub-menu > .disabled.menu-item:focus, .dropdown-item.disabled:hover, .sub-menu > .disabled.menu-item:hover {
+.dropdown-item.disabled, .dropdown-item.disabled:focus, .dropdown-item.disabled:hover {
   color: #818a91;
 }
-.dropdown-item.disabled:focus, .sub-menu > .disabled.menu-item:focus, .dropdown-item.disabled:hover, .sub-menu > .disabled.menu-item:hover {
+.dropdown-item.disabled:focus, .dropdown-item.disabled:hover {
   text-decoration: none;
   cursor: not-allowed;
   background-color: transparent;
@@ -2939,7 +2939,7 @@ input[type="button"].btn-block {
   filter: "progid:DXImageTransform.Microsoft.gradient(enabled = false)";
 }
 
-.open > .dropdown-menu, .open > .sub-menu {
+.open > .dropdown-menu {
   display: block;
 }
 .open > a {
@@ -2974,7 +2974,7 @@ input[type="button"].btn-block {
   z-index: 990;
 }
 
-.pull-right > .dropdown-menu, .pull-right > .sub-menu {
+.pull-right > .dropdown-menu {
   right: 0;
   left: auto;
 }
@@ -2985,9 +2985,8 @@ input[type="button"].btn-block {
   border-top: 0;
   border-bottom: 0.3em solid;
 }
-.dropup .dropdown-menu, .dropup .sub-menu,
-.navbar-fixed-bottom .dropdown .dropdown-menu,
-.navbar-fixed-bottom .dropdown .sub-menu {
+.dropup .dropdown-menu,
+.navbar-fixed-bottom .dropdown .dropdown-menu {
   top: auto;
   bottom: 100%;
   margin-bottom: 2px;
@@ -3613,7 +3612,7 @@ input[type="button"].btn-block {
   display: block;
 }
 
-.nav-tabs .dropdown-menu, .nav-tabs .sub-menu {
+.nav-tabs .dropdown-menu {
   margin-top: -1px;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
@@ -6217,6 +6216,27 @@ a img.aligncenter {
   border-bottom-color: rgba(255, 255, 255, 0.75);
 }
 
+@media (max-width: 767px) {
+  .navbar .navbar-nav .nav-item, .navbar .navbar-nav .menu-item, .navbar .navbar-nav .menu-item {
+    float: none;
+  }
+  .navbar .nav-item + .nav-item, .navbar .menu-item + .nav-item, .navbar .nav-item + .menu-item, .navbar .menu-item + .menu-item {
+    margin-left: 0;
+  }
+  .navbar .dropdown {
+    position: initial;
+  }
+  .navbar .dropdown-menu {
+    position: initial;
+    z-index: initial;
+    float: initial;
+    border: initial;
+    border-radius: initial;
+  }
+  .navbar .dropdown-menu .menu-item {
+    float: none;
+  }
+}
 /*=========================================
 
 	Sticky Footer

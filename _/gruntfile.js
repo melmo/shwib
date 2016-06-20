@@ -29,15 +29,30 @@ module.exports = function(grunt) {
 			},
 			all: [
 				'gruntfile.js',
-				'js/*.js'
+				'js/*.js',
+				'!js/*.min.js'
 			]
+				
 		},
 
 		// concat and minify our JS
 		uglify: {
+			dev: {
+				options: {
+					beautify: true,
+					mangle:false
+				},
+				files: {
+					'js/main.min.js': [
+						'bower_components/bootstrap/dist/js/bootstrap.min.js',
+						'js/main.js'
+					]
+				}
+			},
 			dist: {
 				files: {
 					'js/main.min.js': [
+						'bower_components/bootstrap/dist/js/bootstrap.min.js',
 						'js/main.js'
 					]
 				}
@@ -65,7 +80,7 @@ module.exports = function(grunt) {
 		// watch for changes
 		watch: {
 			scss: {
-				files: ['../scss/**/*.scss'],
+				files: ['scss/**/*.scss'],
 				tasks: [
 					'sass:dev',
 					'notify:scss'
@@ -148,8 +163,9 @@ module.exports = function(grunt) {
 	grunt.registerTask('dev', function() {
 		grunt.task.run([
 			'jshint',
-			'uglify',
-			'sass:dev'
+			'sass:dev',
+			'uglify:dev',
+			'watch'
 		]);
 	});
 
@@ -157,7 +173,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('dist', function() {
 		grunt.task.run([
 			'jshint',
-			'uglify',
+			'uglify:dist',
 			'sass:prod'
 		]);
 	});

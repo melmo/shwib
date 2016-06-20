@@ -6,7 +6,7 @@
     <head>
         <meta http-equiv="Content-Type" content="<?php bloginfo( 'html_type' ); ?>; charset=<?php bloginfo( 'charset' ); ?>" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <link rel="stylesheet" href="<?php bloginfo('template_url');?>/_/css/screen.css">
+        <link rel="stylesheet" href="<?php bloginfo('template_url');?>/_/css/style.css">
         <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url');?>/_/img/favicon.ico" />
         <?php wp_head(); ?> 
     </head>
@@ -23,18 +23,17 @@
         <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
 
         <!-- Fixed navbar -->
-        <div class="navbar navbar-default navbar-fixed-top">
+        <nav class="navbar navbar-dark bg-inverse navbar-fixed-top">
           <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
+              
               <a class="navbar-brand" href="<?php bloginfo('url');?>">Project name</a>
-            </div>
-            <div class="navbar-collapse collapse">
+              <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
+                &#9776;
+              </button>
+            <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
                 <?php get_template_part( 'menus/menu-primary' ); ?>
             </div><!--/.nav-collapse -->
+
           </div>
-        </div>
+        </nav>
+

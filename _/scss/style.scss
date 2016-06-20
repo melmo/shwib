@@ -1,0 +1,364 @@
+/*
+*
+* Bootstrap 3.0
+* 
+*
+*/
+
+// Core variables and mixins
+@import "variables";
+@import "../bower_components/bootstrap/scss/mixins";
+
+// Reset and dependencies
+@import "../bower_components/bootstrap/scss/normalize";
+@import "../bower_components/bootstrap/scss/print";
+
+// Core CSS
+@import "../bower_components/bootstrap/scss/reboot";
+@import "../bower_components/bootstrap/scss/type";
+@import "../bower_components/bootstrap/scss/images";
+@import "../bower_components/bootstrap/scss/code";
+@import "../bower_components/bootstrap/scss/grid";
+@import "../bower_components/bootstrap/scss/tables";
+@import "../bower_components/bootstrap/scss/forms";
+@import "../bower_components/bootstrap/scss/buttons";
+
+// Components
+@import "../bower_components/bootstrap/scss/animation";
+@import "../bower_components/bootstrap/scss/dropdown";
+@import "../bower_components/bootstrap/scss/button-group";
+@import "../bower_components/bootstrap/scss/input-group";
+@import "../bower_components/bootstrap/scss/custom-forms";
+@import "../bower_components/bootstrap/scss/nav";
+@import "../bower_components/bootstrap/scss/navbar";
+@import "../bower_components/bootstrap/scss/card";
+@import "../bower_components/bootstrap/scss/breadcrumb";
+@import "../bower_components/bootstrap/scss/pagination";
+@import "../bower_components/bootstrap/scss/pager";
+@import "../bower_components/bootstrap/scss/labels";
+@import "../bower_components/bootstrap/scss/jumbotron";
+@import "../bower_components/bootstrap/scss/alert";
+@import "../bower_components/bootstrap/scss/progress";
+@import "../bower_components/bootstrap/scss/media";
+@import "../bower_components/bootstrap/scss/list-group";
+@import "../bower_components/bootstrap/scss/responsive-embed";
+@import "../bower_components/bootstrap/scss/close";
+
+// Components w/ JavaScript
+@import "../bower_components/bootstrap/scss/modal";
+@import "../bower_components/bootstrap/scss/tooltip";
+@import "../bower_components/bootstrap/scss/popover";
+@import "../bower_components/bootstrap/scss/carousel";
+
+// Utility classes
+@import "../bower_components/bootstrap/scss/utilities";
+@import "../bower_components/bootstrap/scss/utilities-background";
+@import "../bower_components/bootstrap/scss/utilities-spacing";
+@import "../bower_components/bootstrap/scss/utilities-responsive";
+
+
+//@import "compass/css3";
+
+/*=========================================
+
+	Accessibility
+
+===========================================*/
+
+.skip-nav a {
+	position:fixed;
+	top:0px;
+	bottom:0px;
+	height:0;
+	width:0;
+	overflow:hidden;
+}
+
+.skip-nav a:focus {
+	overflow:visible;
+	background:black;
+	padding:5px;
+	color:white;
+	display:block;
+	position: static;
+	width:100%;
+	height:auto;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+a {
+	outline:none!important;
+}
+
+/*=========================================
+
+	Wordpress Core
+
+===========================================*/
+
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
+
+
+/*=========================================
+
+	Basic Styles
+
+===========================================*/
+
+
+
+
+/*=========================================
+
+	Links & Typography
+
+===========================================*/
+
+
+
+
+/*=========================================
+
+	Menus - integrate bootstrap styles
+	with wordpress menu, drop downs
+
+===========================================*/
+
+#inner-wrap {
+	padding-top: 50px;
+}
+
+.sub-menu {
+	@extend .dropdown-menu;
+}
+
+.sub-menu > .menu-item {
+	@extend .dropdown-item;
+}
+
+.nav > .dropdown > a {
+	&:after {
+		content : '';
+		display: inline-block;
+	    width: 0;
+	    height: 0;
+	    margin-left: 2px;
+	    vertical-align: middle;
+	    border-top: 4px solid;
+	    border-right: 4px solid transparent;
+	    border-left: 4px solid transparent;
+		margin-left: .5em;
+		border-top-color:$navbar-dark-color;
+		border-bottom-color:$navbar-dark-color; 
+	}
+}
+
+.nav > .dropdown > a:hover,.nav > .dropdown > a:focus, .nav > .open > a {
+	&:after {
+		border-top-color:$navbar-dark-hover-color;
+		border-bottom-color:$navbar-dark-hover-color; 
+	}
+}
+
+.menu-item {
+	@extend .nav-item;
+}
+
+.menu-item > a {
+	@extend .nav-link;
+}
+
+.dropdown:hover .dropdown-menu {
+// Uncomment for drop down menus that work on hover
+//	display: block;
+}
+
+
+/*=========================================
+
+	Sticky Footer
+	http://css-tricks.com/snippets/css/sticky-footer/
+
+===========================================*/
+
+html, body, #outer-wrap { height: 100%; }
+
+body > #outer-wrap {height: auto; min-height: 100%;}
+
+#inner-wrap { padding-bottom: 100px; }  /* must be same height as the footer plus extra for space*/
+
+#footer { 
+    position: relative;
+	margin-top: -50px; /* negative value of footer height */
+	height: 50px;
+	clear:both;
+	background: $gray-dark;
+	color: white;
+	padding: 20px 20px;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	.copyright, .credits {
+		text-align: center;
+	}
+} 
+
+
+/*=========================================
+
+	Forms
+
+===========================================*/
+
+input[type=submit] {
+	@extend .btn;
+}
+
+input[type=text], input[type=email], input[type=password], input[type=url], textarea, select {
+	@extend .form-control;
+}
+
+.required {
+	color: $brand-warning;
+}
+
+
+/*=========================================
+
+	Comments
+
+===========================================*/
+
+.commentlist {
+	list-style-type: none;
+	padding-left: 0;
+	ol, ul {
+		padding-left: 2em;
+		list-style-type: none;
+	}
+	li {
+		padding: 1em;
+	}
+	li.odd {
+		background: $gray-lighter;
+	}
+	li.even {
+		background: white;
+	}
+	.comment-image {
+		float: left;
+		margin: 0 1em 1em 0;
+	}
+	.comment-meta {
+		padding-top: 1em;
+	}
+	.comment-text {
+		clear: both;
+		padding-bottom: 1em;
+	}
+}

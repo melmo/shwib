@@ -22,9 +22,6 @@ add_action( 'after_setup_theme', 'shwib_additional_setup' );
  */
 function shwib_theme_setup() {
 
-	/* Get action/filter hook prefix. */
-	$prefix = hybrid_get_prefix();
-
 	/* Add theme support for core framework features. */
 	add_theme_support( 'hybrid-core-widgets' );
 	add_theme_support( 'hybrid-core-template-hierarchy' );

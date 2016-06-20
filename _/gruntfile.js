@@ -29,7 +29,7 @@ module.exports = function(grunt) {
 			},
 			all: [
 				'gruntfile.js',
-				'../js/script.js'
+				'js/*.js'
 			]
 		},
 
@@ -37,8 +37,8 @@ module.exports = function(grunt) {
 		uglify: {
 			dist: {
 				files: {
-					'../js/scripts.min.js': [
-						'../js/scripts.js'
+					'js/main.min.js': [
+						'js/main.js'
 					]
 				}
 			}
@@ -50,22 +50,15 @@ module.exports = function(grunt) {
 				options: {
 					style: 'expanded'
 				},
-				src: ['../scss/style.scss'],
-				dest: '../style.css'
+				src: ['scss/style.scss'],
+				dest: 'css/style.css'
 			},
 			prod: {
 				options: {
 					style: 'compressed'
 				},
-				src: ['../scss/style.scss'],
-				dest: '../style.css'
-			},
-			editorstyles: {
-				options: {
-					style: 'expanded'
-				},
-				src: ['../scss/wp-editor-style.scss'],
-				dest: '../css/wp-editor-style.css'
+				src: ['scss/style.scss'],
+				dest: 'css/style.css'
 			}
 		},
 
@@ -75,7 +68,6 @@ module.exports = function(grunt) {
 				files: ['../scss/**/*.scss'],
 				tasks: [
 					'sass:dev',
-					'sass:editorstyles',
 					'notify:scss'
 				]
 			},
@@ -153,23 +145,20 @@ module.exports = function(grunt) {
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
 	// Development task
-	grunt.registerTask('default', [
-		'jshint',
-		'uglify',
-		'sass:dev',
-		'sass:editorstyles'
-	]);
+	grunt.registerTask('dev', function() {
+		grunt.task.run([
+			'jshint',
+			'uglify',
+			'sass:dev'
+		]);
+	});
 
 	// Production task
 	grunt.registerTask('dist', function() {
 		grunt.task.run([
 			'jshint',
 			'uglify',
-			'sass:prod',
-			'sass:editorstyles',
-			'clean:dist',
-			'copyto:dist',
-			'notify:dist'
+			'sass:prod'
 		]);
 	});
 };

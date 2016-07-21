@@ -1,0 +1,254 @@
+/*=========================================
+
+	Menus - integrate bootstrap styles
+	with wordpress menu, drop downs
+
+===========================================*/
+
+.main-logo {
+	max-width:none;
+	width:auto;
+	max-height:36px;
+}
+
+
+.navbar-general {
+	background:$gray-light;
+	border-bottom:1px solid white;
+	border-radius:0;
+	.btn-secondary {
+		margin-right: 22px;
+	}
+	.navbar-toggler {
+		color: white;
+		outline:none;
+		margin-right:-15px;
+	}
+
+	a.login i {
+		padding-top:5px;
+	}
+}
+
+
+.navbar-main-menu {
+	background:$gray-dark;
+	font-size:14px;	
+
+}
+
+
+
+.navbar-main-menu .navbar-nav .nav-link, .navbar-main-menu .navbar-nav .menu-item > a {
+	color:white;
+	padding:.425rem 1.6rem .425rem 0;
+	&:hover, &:focus, &:active {
+		color: white;
+	}
+	&:after {
+		margin-left:8px;
+		border-top-color:rgba(255,255,255,.8);
+		border-bottom-color:rgba(255,255,255,.8);
+	}
+
+}
+
+.navbar-main-menu {
+	padding-top:0;
+	padding-bottom:0;
+	border-radius:0;
+	.nav-wrap {
+		padding:0.5rem 0;
+		li.menu-item {
+			margin-left:0;
+		}
+		.dropdown-menu {
+			background:$gray-dark;		
+			font-weight:400;
+			font-size:14px;
+			border-radius:0;
+			margin-top:8px;
+			padding:0;
+			border:none;
+			li.menu-item {
+				border-top:1px solid white;
+				&:hover {
+					background:transparent;
+				}
+				a:focus, a:active, a:hover {
+					font-style: italic;
+					color: white;
+				}
+				a {
+					color: rgba(255,255,255,.8);
+				}
+			}
+		}
+	}
+	
+}
+
+
+
+.menu-item {
+	@extend .nav-item;
+}
+
+.menu-item > a {
+	@extend .nav-link;
+}
+
+.navbar-social a {
+	color:white;
+	border-radius:50%;
+	display:inline-block;
+	height:30px;
+	width:30px;
+	margin-left:13px;
+	font-size: 19px;
+    padding: 1px 0 0 2px;
+    margin-top:10px;
+	&.twitter-link {
+		background:#55acee;
+	}
+	&.facebook-link {
+		background:#3b5998;
+	}
+	&.linkedin-link {
+		background:#0976b4;
+	}
+}
+
+.navbar-brand {
+	padding-top:.5rem;
+}
+
+@include media-breakpoint-up(md) {
+	.navbar-general {
+		padding-top:0;
+		padding-bottom:0;
+	}
+	.main-logo {
+		max-width:180px;
+		height:auto;
+	}
+	.navbar-toggleable-sm {
+		height:auto!important;
+	}
+	#menu-primary-items {
+		.dropdown-menu {
+			margin-left:-1rem;
+		}
+	}
+
+}
+
+@include media-breakpoint-down(md) {
+	#search-toggle {
+		position: relative;
+	}
+	.navbar-search {
+		position: absolute;
+		right:55px;
+	}
+
+}
+
+@include media-breakpoint-down(sm) {
+
+	/* carets */
+	.nav > .dropdown > a {
+		&:after {
+			content : '+';
+			border:none;
+			float: right;
+			font-size: 26px;
+    		margin-top: -9px;
+		}
+	}
+
+	.nav > .login-link > a {
+		//https://github.com/Angelmmiguel/material_icons/blob/master/app/assets/stylesheets/material_icons_unicode.css.erb#L85-L3265
+		&:after {
+			content : "\e7fd";
+			margin-right:-15px;
+			border:none;
+			float: right;
+			font-size: 26px;
+   			margin-top: 0px;
+   			font-family: 'Material Icons';
+		    font-weight: normal;
+		    font-style: normal;
+		    font-size: 24px;
+		    line-height: 1;
+		    letter-spacing: normal;
+		    text-transform: none;
+		    display: inline-block;
+		    white-space: nowrap;
+		    word-wrap: normal;
+		    direction: ltr;
+		    -webkit-font-feature-settings: 'liga';
+		    -webkit-font-smoothing: antialiased;
+		}
+	}
+
+
+	.navbar-main-menu {
+
+		.nav-wrap {
+			padding:0;
+			margin-left:-0.9375rem;
+			margin-right:-0.9375rem;
+		
+			li.menu-item {
+				border-top: 1px solid #2786af;
+				padding:0 0.9375rem;
+
+				a {
+					padding: .525rem .6rem .525rem 0;
+				}
+				&:hover {
+				}
+				a:focus, a:active, a:hover {
+				}
+			}
+			.dropdown-menu {
+				margin-top:0;
+				margin-left:-0.9375rem;
+				margin-right:-0.9375rem;
+				min-width: 100%;
+			    position: static;
+			    float: none;
+				.dropdown-item {
+					padding:0 0.9375rem 0 1.875rem;
+				}
+			}
+		}
+	}
+
+	.navbar-brand {
+		padding:0;
+	}
+	.navbar {
+
+		.navbar-nav .nav-item, .navbar-nav .menu-item {
+			float: none;
+		}
+
+		.nav-item + .nav-item {
+			margin-left: 0;
+		}
+
+		.dropdown {
+			position: initial;
+		}
+
+		.dropdown-menu {
+			position: initial;
+			z-index: initial;
+			float: initial;
+			border: initial;
+			border-radius: initial;
+		}
+	}
+}

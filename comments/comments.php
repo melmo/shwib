@@ -8,10 +8,10 @@
  */
 
 /* If a post password is required or no comments are given and comments/pings are closed, return. */
-if ( post_password_required() || ( !have_comments() && !comments_open() && !pings_open() ) )
-	return;
-?>
 
+if ( post_password_required() || ( !have_comments() && !comments_open() && !pings_open() ) )
+return;
+?>
 <div id="comments-template">
 
 	<div class="comments-wrap">
@@ -24,8 +24,7 @@ if ( post_password_required() || ( !have_comments() && !comments_open() && !ping
 
 
 				<ol class="comment-list">
-					<?php// wp_list_comments(/* hybrid_list_comments_args()*/ ); ?>
-					<?php //wp_list_comments(array('format'            => 'xhtml') ); ?>
+					<?php wp_list_comments( ); ?>
 
 					
 				</ol><!-- .comment-list -->
@@ -59,4 +58,4 @@ if ( post_password_required() || ( !have_comments() && !comments_open() && !ping
 		</div>
 	</div><!-- .comments-wrap -->
 
-</div><!-- #comments-template -->
+</div><!-- #comments-template 

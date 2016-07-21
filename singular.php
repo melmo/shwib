@@ -48,7 +48,7 @@
 
                         <?php get_template_part( 'sidebars/sidebar-after-singular' ); ?>
 
-                        <?php comments_template( 'comments/comments.php', true ); // Loads the comments.php template. ?>
+                        <?php comments_template( '/comments/comments.php' ); // Loads the comments.php template. ?>
 
                     <?php else : ?>
 

@@ -8,13 +8,13 @@
  * by the theme, child themes, and plugins. 
  *
  */
-?>
+?>  </div> <!--#main-->
         </div> <!--#innerwrap-->
             </div> <!--#outerwrap-->
             <footer id="footer">
                 <div class="container">
                     <?php get_template_part( 'sidebar-subsidiary' ); ?>
-                    <p class="copyright credits">&copy; Company <?php echo date ( 'Y' ); ?></p>
+                    <p class="copyright credits">&copy; <?php echo date ( 'Y' ); ?> | Maintained with love by <a href="http://littlewebgiants.com" target="_blank">Little Web Giants</a></p>
                 </div>
             </footer>      
         <?php wp_footer(); ?> 

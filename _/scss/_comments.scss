@@ -1,0 +1,108 @@
+/*=========================================
+
+	Comments
+
+===========================================*/
+
+#comments-template {
+	font-size:.875rem;
+	line-height:1.5em;
+	padding-top:30px;
+	h4 {
+		color:$gray-dark;
+	}
+	.reply{
+		position: absolute;
+		top:1.5rem;
+		right:0px;
+		a {
+			text-transform: uppercase;
+			@include no-underline;
+			color:$gray;
+			font-weight:bold;
+		} 
+	}
+	.comment-author img {
+		border-radius:50%;
+		float: left;
+		margin: 0 16px 1em 0;
+	}
+
+	.comment-list {
+		border-bottom:1px solid #d5e0e4;
+	}
+
+	.comment-author {
+		a {
+			@include no-underline;
+		}
+		span, span a, a span {
+			color: $gray-dark;
+			font-family: $font-family-serif;
+			font-size:1.1rem;
+
+		}
+		.says {
+			display: none;
+		}
+	}
+	.comment-metadata {
+		margin-bottom: .5rem;
+	}
+	.comment-metadata a {
+		@include no-underline;
+	}
+	.comment-metadata time {
+		color: $gray-dark;
+		font-family: $font-family-serif;
+		@include no-underline;
+	}
+	.comment-content {
+		padding-left:48px;
+		display: inline-block;
+	}
+
+	ol {
+		list-style-type: none;
+		padding-left: 0;
+		ol, ul {
+			li {
+				padding-left: 3em;
+			}
+		}
+		li {
+			border-top:1px solid #d5e0e4;
+			padding: 1em 0;
+			position: relative;
+		}
+		.comment-meta {
+			padding-top: 1em;
+			@include clearfix;
+		}
+		.comment-text {
+			clear: both;
+			padding-bottom: 1em;
+		}
+	}
+
+	.comment-respond {
+		margin-top:2rem;
+	}
+	
+}
+
+
+@include media-breakpoint-down(sm) {
+	#comments-template {
+		ol ol li, .ol ul li {
+		    padding-left: 1.5em;
+		}
+		.comment-author img {
+			max-width:45px;
+		}
+		.comment-content {
+		    padding-left: 61px;
+		}
+	}
+	
+}

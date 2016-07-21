@@ -47,17 +47,16 @@ function shwib_description() {
 	$description = '';
 
 	if ( is_home() ) {
-		$description = get_bloginfo( 'description' );
+		$description = "Latest news on the solar energy and photovoltaics industry in the USA: installations, manufacturing, markets & policy, and technology.";
 	}
 
 	elseif ( is_singular() ) {
-		$description = get_metadata( 'post', $wp_query->post->ID, 'Description', true );
 
 		if ( empty( $description ) && is_front_page() )
 			$description = get_bloginfo( 'description' );
 
 		elseif ( empty( $description ) )
-			$description = shwib_excerpt($wp_query->post->ID,'');
+			$description = get_the_excerpt($wp_query->post->ID);
 	}
 
 	elseif ( is_archive() ) {
@@ -73,6 +72,10 @@ function shwib_description() {
 			$description = $post_type->description;
 		}
 	}
+
+	if ( empty( $description ) )
+		$description = get_bloginfo( 'description' );
+
 return __($description);
 }
 
@@ -94,28 +97,26 @@ function shwib_the_excerpt_max_charlength($charlength) {
    }
 }
 
-function shwib_image() {
+function shwib_image($size = 'full') {
 	global $post;
-	$image ='';
-	if ( is_singular() && empty($image) && has_post_thumbnail($post->ID) ) {
-		$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'post-thumbnail');
+	$image = array();
+	if ( is_singular() && count($image) == 0 && has_post_thumbnail($post->ID) ) {
+		$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), $size);
 		if ($thumbnail) {
-			$image = $thumbnail[0];
+			$image['url'] = $thumbnail[0];
+			$image['width'] = $thumbnail[1];
+			$image['height'] = $thumbnail[2];
 		}
 	}
-	if ( is_singular() && empty($image) && has_post_thumbnail($post->ID)  ) {
-        $thumbnailID = get_post_thumbnail_id( $post->ID );
-        // If the post thumbnail id has the form ngg- then it is a NextGEN image.
-        if ( is_string($thumbnailID) && substr($thumbnailID, 0, 4) == 'ngg-') {
-            $thumbnailID = substr($thumbnailID, 4);
-            $image = nggdb::find_image($thumbnailID);
-            if ($image) { // Safety check for null pointer.
-                $image = $image->thumbURL;
-				 $image = str_replace("thumbs/thumbs_","",$image);
-            }
+	if (count($image) == 0) {
+		$image['url'] = get_bloginfo('template_url').'/_/img/logo.png';
+		$dimensions = getimagesize(get_bloginfo('template_url').'/_/img/logo.png');
+		if ($dimensions) {
+			$image['width'] = $dimensions[0];
+			$image['height'] = $dimensions[1];
+		}
 		
-        }
-    }
-	if ($image == '') {$image = get_bloginfo('template_url').'/_/img/logo.png';}
+
+	}
     return $image;
 }

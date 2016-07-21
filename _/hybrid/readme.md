@@ -40,45 +40,8 @@ You can't create child themes for Hybrid Core because it's not a theme.  However
 
 I was one of the original theme authors to help pioneer the parent/child theme movement.  I'm a big believer in child themes being the absolute best way to make theme customizations.  Therefore, Hybrid Core is built with this idea in mind.  As you learn more about the framework, you'll understand how it makes child theme development even better.
 
-### Can I contribute to Hybrid Core? ###
-
-Certainly.  The code for the framework is handled via its [GitHub Repository](https://github.com/justintadlock/hybrid-core).  You can open tickets, create patches, and send pull requests there.
-
-Please don't make pull requests against the `master` branch.  This is the latest, stable code.  You can make a pull request against one of the point branches or the `dev` (future release) branch.
-
 ## Copyright and License ##
 
 This project is licensed under the [GNU GPL](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html), version 2 or later.
 
 2008&thinsp;&ndash;&thinsp;2014 &copy; [Justin Tadlock](http://justintadlock.com).
-
-## Changelog ##
-
-You can see the changes made via the [commit log](https://github.com/justintadlock/hybrid-core/commits/master) for the latest release.
-
-### Changelogs for each release ###
-
-* [2.0.4](https://github.com/justintadlock/hybrid-core/tree/2.0.4)
-* [2.0.3](https://github.com/justintadlock/hybrid-core/tree/2.0.3)
-* [2.0.2](https://github.com/justintadlock/hybrid-core/tree/2.0.2)
-* [2.0.1](https://github.com/justintadlock/hybrid-core/tree/2.0.1)
-* [2.0.0](https://github.com/justintadlock/hybrid-core/commits/2.0)
-* [1.6.2](https://github.com/justintadlock/hybrid-core/tree/1.6.2)
-* [1.6.1](https://github.com/justintadlock/hybrid-core/tree/1.6.1)
-* [1.6.0](https://github.com/justintadlock/hybrid-core/tree/1.6.0)
-* [1.5.5](https://github.com/justintadlock/hybrid-core/tree/1.5.5)
-* [1.5.4](https://github.com/justintadlock/hybrid-core/tree/1.5.4)
-* [1.5.3](https://github.com/justintadlock/hybrid-core/tree/1.5.3)
-* [1.5.2](https://github.com/justintadlock/hybrid-core/tree/1.5.2)
-* [1.5.1](https://github.com/justintadlock/hybrid-core/tree/1.5.1)
-* [1.5.0](https://github.com/justintadlock/hybrid-core/tree/1.5)
-* [1.4.3](https://github.com/justintadlock/hybrid-core/tree/1.4.3)
-* [1.4.2](https://github.com/justintadlock/hybrid-core/tree/1.4.2)
-* [1.4.1](https://github.com/justintadlock/hybrid-core/tree/1.4.1)
-* [1.4.0](https://github.com/justintadlock/hybrid-core/tree/1.4)
-* [1.3.1](https://github.com/justintadlock/hybrid-core/tree/1.3.1)
-* [1.3.0](https://github.com/justintadlock/hybrid-core/tree/1.3)
-* [1.2.1](https://github.com/justintadlock/hybrid-core/tree/1.2.1)
-* [1.2.0](https://github.com/justintadlock/hybrid-core/tree/1.2)
-* [1.1.1](https://github.com/justintadlock/hybrid-core/tree/1.1.1)
-* [1.1.0](https://github.com/justintadlock/hybrid-core/tree/1.1)

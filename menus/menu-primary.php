@@ -8,6 +8,6 @@
 
 if ( has_nav_menu( 'primary' ) ) : ?>
 
-		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav navbar-nav', 'menu_id' => 'menu-primary-items', 'fallback_cb' => '' ) ); ?>
+		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav navbar-nav', 'menu_id' => 'menu-primary-items', 'fallback_cb' => '','walker' => new Dropdown_Nav_Walker(), ) ); ?>
 
 <?php endif; ?>

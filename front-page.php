@@ -8,31 +8,74 @@
 ?>
 <?php get_header(); ?>
         <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-      </div>
-    </div>
-
-    <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+    <div id="content"><!-- Skip nav link  target-->
+      <div class="jumbotron" >
+        <div class="container">
+          <h1>Hello, world!</h1>
+          <p>shwib is a starter kit for rapid Wordpress theme development.</p>
+          <a class="btn btn-primary" href="<?php bloginfo('url');?>/quick-start-guide/">Get started</a>
         </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+      </div>
+
+      <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Your favourite tools</h2>
+          </div>
+          <div class="col-md-4">
+            <div class="demo-image">
+              <img src="<?php bloginfo('template_url');?>/_/img/demo-content-img/bootstrap-logo.png">
+            </div>
+            <h3>Bootstrap</h3>
+            <p>Sass powered Boostrap 4.0 alpha.</p>
+            
+          </div>
+          <div class="col-md-4">
+            <div class="demo-image">
+              <img src="<?php bloginfo('template_url');?>/_/img/demo-content-img/theme-hybrid-logo.png">
+            </div>
+            <h3>Hybrid</h3>
+            <p>Wordpress enhancements courtesy of the Hybrid Framework.</p>
+            
+         </div>
+          <div class="col-md-4">
+            <div class="demo-image">
+              <img src="<?php bloginfo('template_url');?>/_/img/demo-content-img/grunt-bower.png">
+            </div>
+            <h3>npm, Bower, Grunt</h3>
+            <p>Modern front end development toolkit.</p>
+            
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Built with schwib</h2>
+          </div>
+          <div class="col-md-4">
+            <div class="demo-screen">
+              <img src="<?php bloginfo('template_url');?>/_/img/demo-content-img/pv-magazine-screen.png">
+            </div>
+            <h3>pv magazine USA</h3>
+            <p>The world's leading solar energy trade journal.</p>
+            
+          </div>
+          <div class="col-md-4">
+            <div class="demo-screen">
+              <img src="<?php bloginfo('template_url');?>/_/img/demo-content-img/academy-screen-1.png">
+            </div>
+            <h3>betahaus Academy</h3>
+            <p>Redefining education for the makers and doers of tomorrow.</p>
+            
+         </div>
+          <div class="col-md-4">
+            <div class="demo-screen">
+              <img src="<?php bloginfo('template_url');?>/_/img/demo-content-img/bienenbox-screen.png">
+            </div>
+            <h3>BienenBox</h3>
+            <p>Social network and online shop for urban beekeepers.</p>
+            
+          </div>
         </div>
       </div>
     </div>

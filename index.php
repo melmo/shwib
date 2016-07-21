@@ -9,34 +9,35 @@
  */
 get_header(); ?>
 
-        <div class="container">
+        <div class="container" id="content">
 
             <div class="row">
             
                 <div class="col-sm-12">
 
-                    <?php if (!is_singular() ){ get_template_part( 'loop-meta' ); }  ?>
+                    <?php if (!is_singular() ){ get_template_part( 'loop/loop-meta' ); }  ?>
 
                     <?php if ( have_posts() ) : ?>
 
                         <?php while ( have_posts() ) : the_post(); ?>
 
-                            <div <?php hybrid_attr( 'content' ); ?>>
+                            <div class="entry">
 
-                                <a href="<?php the_permalink();?>"><h1 <?php echo hybrid_get_attr( 'entry-title' ); ?>><?php the_title();?></h1></a>
+                                <h2 <?php echo hybrid_get_attr( 'entry-title' ); ?>><a href="<?php the_permalink();?>" ><?php the_title();?></a></h2>
 
                                 <div class="entry-byline">
                                     <span <?php hybrid_attr( 'entry-author' ); ?>><?php the_author_posts_link(); ?></span>
                                     <time <?php hybrid_attr( 'entry-published' ); ?>><?php echo get_the_date(); ?></time>
-                                    <?php comments_popup_link( number_format_i18n( 0 ), number_format_i18n( 1 ), '% Comments', 'comments-link', '' ); ?>
+                                    <?php comments_popup_link( number_format_i18n( 0 ) . ' Comments', number_format_i18n( 1 )  . ' Comment', '% Comments', 'comments-link', '' ); ?>
                                     <?php edit_post_link(); ?>
                                 </div><!-- .entry-byline -->
 
-                                <div class="entry-content">
-                                    <?php the_post_thumbnail(); ?>
-                                    <?php the_excerpt(); ?>
-                                    <?php wp_link_pages( array( 'before' => '<p class="page-links">' . __( 'Pages:', 'shwib' ), 'after' => '</p>' ) ); ?>
+                                <a href="<?php the_permalink();?>" class="entry-image-link"><?php the_post_thumbnail(); ?></a>
 
+                                <div class="entry-content">
+                                    
+                                    <?php the_excerpt(); ?>
+                                    
                                 </div><!-- .entry-content -->
 
                                 <footer class="entry-footer">

@@ -22,9 +22,6 @@ add_action( 'after_setup_theme', 'shwib_additional_setup' );
  */
 function shwib_theme_setup() {
 
-	/* Get action/filter hook prefix. */
-	$prefix = hybrid_get_prefix();
-
 	/* Add theme support for core framework features. */
 	add_theme_support( 'hybrid-core-widgets' );
 	add_theme_support( 'hybrid-core-template-hierarchy' );
@@ -103,13 +100,9 @@ add_action('wp_enqueue_scripts', 'shwib_add_scripts');
 
 function shwib_add_scripts() {
 
-   	wp_enqueue_script('bootstrap',
-       get_template_directory_uri() . '/_/js/vendor/bootstrap.min.js',
-       array("jquery"),
-       '3.0.0', true );
    	wp_enqueue_script('main',
-       get_template_directory_uri() . '/_/js/main.js',
-       array("bootstrap", "jquery"),
+       get_template_directory_uri() . '/_/js/main.min.js',
+       array( "jquery"),
        '1.0', true );
 }
 
@@ -127,8 +120,8 @@ function content_bump() {
 
 
 // Add menu-parent-item class to tops li of submenu
-add_filter( 'wp_nav_menu_objects', 'add_menu_parent_class' );
-function add_menu_parent_class( $items ) {
+add_filter( 'wp_nav_menu_objects', 'shwib_add_menu_parent_class' );
+function shwib_add_menu_parent_class( $items ) {
 	
 	$parents = array();
 	foreach ( $items as $item ) {
@@ -140,8 +133,65 @@ function add_menu_parent_class( $items ) {
 	foreach ( $items as $item ) {
 		if ( in_array( $item->ID, $parents ) ) {
 			$item->classes[] = 'dropdown'; 
+			
 		}
 	}
 	
 	return $items;    
+}
+
+add_filter('nav_menu_css_class', 'shwib_add_dropdown_menu_class', 10, 4);
+
+function shwib_add_dropdown_menu_class( $classes , $item, $args, $depth ) {
+	if ($depth == 1)
+		$classes[] = "dropdown-item";
+	return $classes;
+}
+
+
+add_filter('nav_menu_link_attributes', 'shwib_add_nav_link_atts', 10, 4);
+
+function shwib_add_nav_link_atts( $atts , $item, $args, $depth ) {
+	if (in_array('menu-item-has-children', $item->classes)) {
+		$atts['class'] = 'dropdown-toggle';
+		$atts['data-toggle'] = 'dropdown';
+	}
+	
+	return $atts;
+}
+
+
+
+class Dropdown_Nav_Walker extends Walker_Nav_Menu {
+ 
+    // start the top level
+    public function start_lvl( &$output, $depth = 0, $args = array() ) {
+		$indent = str_repeat("\t", $depth);
+		$output .= "\n$indent<ul class=\"dropdown-menu\">\n";
+	}
+ 
+    // end the top level
+    function end_lvl(&$output, $depth=0, $args=array()) {
+
+        parent::end_lvl($output, $depth,$args);
+    }
+ 
+    // print top-level elements
+    function start_el(&$output, $item, $depth=0, $args=array()) {
+
+        parent::start_el($output, $item, $depth, $args);
+    }
+ 
+    function end_el(&$output, $item, $depth=0, $args=array()) {
+
+    	
+
+        parent::end_el($output, $item, $depth, $args);
+    }
+ 
+    // follow down  branch
+    function display_element( $element, &$children_elements, $max_depth, $depth=0, $args, &$output ) {
+ 
+        parent::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
+    }
 }

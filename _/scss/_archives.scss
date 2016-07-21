@@ -1,0 +1,73 @@
+/*=========================================
+
+	Archives
+
+===========================================*/
+
+.entry {
+	margin-bottom:3rem;
+	@include clearfix;
+}
+
+.entry-byline {
+    margin-bottom: .75rem;
+    border-bottom: 1px solid $gray-light;
+    font-size: .875rem;
+}
+
+.loop-meta {
+	margin-bottom: 1.5rem;
+    border-bottom: 1px solid $gray;
+}
+
+.entry-footer {
+	font-size: .875rem;
+}
+ 
+
+.entry-image-link {
+	display: block;
+	float: left;
+    max-width: 20%;
+    margin-right: 1rem;
+}
+
+
+.pagination {
+	display:block;
+	text-align:center;
+	.navigation {
+		display: inline-block;
+	}
+	.page-numbers {
+		@extend .page-link;
+		&:active,&:hover,&:focus {
+			background:$gray-light;
+			color: white;
+		}
+	}
+	.current {
+		background:$gray-dark;
+		color: white;
+		&:active,&:hover,&:focus {
+			background:$gray-dark;
+			color: white;
+		}
+	}
+	.dots {
+		background: white;
+		color: $gray;
+		&:active,&:hover,&:focus {
+			color:$gray;
+			background: white;
+		}
+	}
+}
+
+@include media-breakpoint-down(xs) {
+	.entry-image-link {
+		max-width:none;
+		margin-right:0;
+		float: none;
+	}
+}

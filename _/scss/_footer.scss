@@ -1,0 +1,37 @@
+/*=========================================
+
+	Sticky Footer
+	http://css-tricks.com/snippets/css/sticky-footer/
+
+===========================================*/
+
+html, body, #outer-wrap { height: 100%; }
+
+body > #outer-wrap {height: auto; min-height: 100%;}
+
+#inner-wrap { padding-bottom: 100px; }  /* must be same height as the footer plus extra for space*/
+
+#footer { 
+    position: relative;
+	margin-top: -60px; /* negative value of footer height */
+	height: 60px;
+	clear:both;
+	background: $gray-dark;
+	color: white;
+	padding: 20px 20px 0;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	.copyright, .credits {
+		text-align: center;
+	}
+	a {
+		color: white;
+	}
+} 
+@include media-breakpoint-down(md) {
+	#footer {
+		height:auto;
+		margin-top:0;
+	}
+}

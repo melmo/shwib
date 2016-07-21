@@ -6,16 +6,14 @@
  *
  */
 ?>
-<div <?php hybrid_attr( 'loop-meta' ); ?>>
 
-	<h1 <?php hybrid_attr( 'loop-title' ); ?>><?php the_archive_title(); ?></h1>
 
-	<?php if ( !is_paged() && $desc = hybrid_get_loop_description() ) : // Check if we're on page/1. ?>
+<?php if (!is_home()) { ?>
+	<div class="archive-title">
+		<div <?php hybrid_attr( 'loop-meta' ); ?>>
 
-		<div <?php hybrid_attr( 'loop-description' ); ?>>
-			<?php echo $desc; ?>
-		</div><!-- .loop-description -->
+			<h1 <?php hybrid_attr( 'loop-title' ); ?>><?php the_archive_title(); ?></h1>
 
-	<?php endif; // End paged check. ?>
-
-</div><!-- .loop-meta -->
+		</div><!-- .loop-meta -->
+	</div>
+<?php } ?>

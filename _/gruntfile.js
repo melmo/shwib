@@ -24,7 +24,8 @@ module.exports = function(grunt) {
 				"undef": true,
 				"globals": {
 					"jQuery": true,
-					"alert": true
+					"alert": true,
+					"tinymce" : true
 				}
 			},
 			all: [
@@ -44,6 +45,7 @@ module.exports = function(grunt) {
 				},
 				files: {
 					'js/main.min.js': [
+						'bower_components/tether/dist/js/tether.min.js',
 						'bower_components/bootstrap/dist/js/bootstrap.min.js',
 						'js/main.js'
 					]
@@ -52,6 +54,7 @@ module.exports = function(grunt) {
 			dist: {
 				files: {
 					'js/main.min.js': [
+						'bower_components/tether/dist/js/tether.min.js',
 						'bower_components/bootstrap/dist/js/bootstrap.min.js',
 						'js/main.js'
 					]
@@ -92,7 +95,7 @@ module.exports = function(grunt) {
 				],
 				tasks: [
 					'jshint',
-					'uglify',
+					'uglify:dev',
 					'notify:js'
 				]
 			}

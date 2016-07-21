@@ -39,7 +39,7 @@ function opengraph_metadata() {
  	// defualt properties defined at http://opengraphprotocol.org/
 	$properties = array(
 		// required
-		'title', 'type', 'image', 'url', 
+		'title', 'type', 'image', 'image:width', 'image:height', 'url', 
 
 		// optional
 		'site_name', 'description', 
@@ -68,6 +68,8 @@ function opengraph_default_metadata() {
 	add_filter('opengraph_title', 'opengraph_default_title', 5);
 	add_filter('opengraph_type', 'opengraph_default_type', 5);
 	add_filter('opengraph_image', 'opengraph_default_image', 5);
+	add_filter('opengraph_image:width', 'opengraph_default_image_width', 5);
+	add_filter('opengraph_image:height', 'opengraph_default_image_height', 5);
 	add_filter('opengraph_url', 'opengraph_default_url', 5);
 	add_filter('opengraph_site_name', 'opengraph_default_sitename', 5);
 	add_filter('opengraph_description', 'opengraph_default_description', 5);
@@ -84,7 +86,7 @@ function opengraph_default_title( $title ) {
 		$title = $post->post_title;
 	}
 
-	return wp_title(" |", false);
+	return wp_get_document_title();
 }
 
 
@@ -102,8 +104,27 @@ function opengraph_default_type( $type ) {
  * Default image property, using the post-thumbnail.
  */
 function opengraph_default_image( $image ) {
-	$image = shwib_image();
-	return $image;
+	$image = shwib_image('large');
+
+	return $image['url'];
+}
+
+/**
+ * Default image width property, using the post-thumbnail.
+ */
+function opengraph_default_image_width( $image ) {
+	$image = shwib_image('large');
+
+	return $image['width'];
+}
+
+/**
+ * Default image height property, using the post-thumbnail.
+ */
+function opengraph_default_image_height( $image ) {
+	$image = shwib_image('large');
+
+	return $image['height'];
 }
 
 
@@ -156,6 +177,14 @@ function opengraph_meta_tags() {
 		echo '<meta ' . $xml_ns . 'property="' . esc_attr($key) . '" content="' . esc_attr($value) . '" />' . "\n";
 		
 	}
+	global $wp_query;
+	
 	echo '<meta name="description" content="' . esc_attr(shwib_description()) . '">';
+	$author = is_singular( 'post' ) ? get_the_author_meta('display_name',$wp_query->post->ID) : get_bloginfo('name');
+	echo '<meta name="author" content="' . $author . '" />';
+	if (is_singular() ) {
+		echo '<meta property="article:publisher" content="https://www.facebook.com/littlewebgiants/">';
+	}
+	
 	
 }

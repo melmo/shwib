@@ -100,10 +100,6 @@ add_action('wp_enqueue_scripts', 'shwib_add_scripts');
 
 function shwib_add_scripts() {
 
- /*  	wp_enqueue_script('bootstrap',
-       get_template_directory_uri() . '/_/js/vendor/bootstrap.min.js',
-       array("jquery"),
-       '3.0.0', true );*/
    	wp_enqueue_script('main',
        get_template_directory_uri() . '/_/js/main.min.js',
        array( "jquery"),

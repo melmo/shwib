@@ -6,7 +6,7 @@
  *
  */
 ?>
-	<div id="post-0" class="<?php hybrid_entry_class(); ?>">
+	<div id="post-0">
 
 		<div class="entry-content">
 

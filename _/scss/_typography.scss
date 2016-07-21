@@ -1,0 +1,14 @@
+/*=========================================
+
+	Links & Typography
+	
+	h1,h2,h3,h4,h5,h6,a,blockquote,ul,ol,p .btn
+
+===========================================*/
+
+@mixin no-underline {
+	text-decoration:none;
+	&:hover, &:focus, &:active, &:visited {
+		text-decoration:none;
+	}
+}

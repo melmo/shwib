@@ -34,3 +34,14 @@ Includes:
 - Plus a bunch of other goodies from the Hybrid Core framework
 
 Enjoy :)
+
+
+Using grunt
+adding things to npm
+adding things to grunt
+where is the css (how to get line number info from sass compilation??)
+where is the javascript
+menus & sidebars
+custom post types
+theme settings
+social sharing, logos etc

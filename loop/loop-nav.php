@@ -18,8 +18,8 @@
 
 	<?php the_posts_pagination(
 		array( 
-			'prev_text' => _x( '&larr; Previous', 'posts navigation', 'hybrid-base' ), 
-			'next_text' => _x( 'Next &rarr;',     'posts navigation', 'hybrid-base' )
+			'prev_text' => _x( '&larr;', 'posts navigation', 'hybrid-base' ), 
+			'next_text' => _x( '&rarr;',     'posts navigation', 'hybrid-base' )
 		) 
 	); ?>
 

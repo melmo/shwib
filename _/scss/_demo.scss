@@ -1,0 +1,30 @@
+/*=========================================
+
+	Demo
+
+===========================================*/
+
+.demo-image {
+	img {
+		max-height:67px;
+		margin:0 auto 1rem;
+
+	}
+}
+
+.demo-screen {
+	height:200px;
+	margin:0 auto 1rem;
+	overflow:hidden;
+	border:2px solid $gray-lighter;
+}
+
+.home {
+	text-align:center;
+	h2 {
+		margin-top:1rem;
+	}
+	h3 {
+		text-align:center;
+	}
+}

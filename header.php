@@ -27,7 +27,7 @@
                     &#9776;
                 </button>
 
-                <a class="navbar-brand" href="<?php bloginfo('url');?>" title="pv magazine USA - Photovoltaics Markets and Technology">
+                <a class="navbar-brand" href="<?php bloginfo('url');?>" title="shwib - a functional Wordpress theme by Little Web Giants">
                     <?php if (is_home()) { ?>
                         <h1 class="sr-only"><?php bloginfo('name');?></h1>
                     <?php } ?>

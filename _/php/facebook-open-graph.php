@@ -183,7 +183,7 @@ function opengraph_meta_tags() {
 	$author = is_singular( 'post' ) ? get_the_author_meta('display_name',$wp_query->post->ID) : get_bloginfo('name');
 	echo '<meta name="author" content="' . $author . '" />';
 	if (is_singular() ) {
-		echo '<meta property="article:publisher" content="https://www.facebook.com/littlewebgiants/">';
+		echo '<meta property="article:publisher" content="https://www.facebook.com/">';
 	}
 	
 	

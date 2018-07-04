@@ -43,14 +43,14 @@
             <div class="demo-image">
               <img src="<?php bloginfo('template_url');?>/_/img/demo-content-img/grunt-bower.png">
             </div>
-            <h3>npm, Bower, Grunt</h3>
+            <h3>Yarn & Grunt</h3>
             <p>Modern front end development toolkit.</p>
             
           </div>
         </div>
         <div class="row">
           <div class="col-md-12">
-            <h2>Built with schwib</h2>
+            <h2>Built with shwib</h2>
           </div>
           <div class="col-md-4">
             <div class="demo-screen">

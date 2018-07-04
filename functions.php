@@ -177,7 +177,7 @@ class Dropdown_Nav_Walker extends Walker_Nav_Menu {
     }
  
     // print top-level elements
-    function start_el(&$output, $item, $depth=0, $args=array()) {
+    function start_el(&$output, $item, $depth=0, $args=array(), $id = 0) {
 
         parent::start_el($output, $item, $depth, $args);
     }

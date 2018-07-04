@@ -45,8 +45,7 @@ module.exports = function(grunt) {
 				},
 				files: {
 					'js/main.min.js': [
-						'bower_components/tether/dist/js/tether.min.js',
-						'bower_components/bootstrap/dist/js/bootstrap.min.js',
+						'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
 						'js/main.js'
 					]
 				}
@@ -54,8 +53,7 @@ module.exports = function(grunt) {
 			dist: {
 				files: {
 					'js/main.min.js': [
-						'bower_components/tether/dist/js/tether.min.js',
-						'bower_components/bootstrap/dist/js/bootstrap.min.js',
+						'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
 						'js/main.js'
 					]
 				}

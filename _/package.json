@@ -1,20 +1,31 @@
 {
   "name": "shwib",
-  "version": "0.0.1",
+  "version": "1.1.0",
   "devDependencies": {
     "grunt": "~0.4.2",
-    "grunt-contrib-watch": "~0.4.3",
-    "grunt-contrib-uglify": "~0.2.5",
-    "matchdep": "~0.1.2",
-    "grunt-sass": "~1.2.0",
-    "grunt-phpcs": "~0.2.1",
-    "grunt-contrib-jshint": "~0.7.2",
-    "grunt-notify": "~0.2.16",
-    "grunt-contrib-copy": "~0.5.0",
-    "grunt-copy-to": "0.0.10",
-    "grunt-rm": "0.0.4",
     "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-jshint": "~0.7.2",
     "grunt-contrib-sass": "~0.6.0",
-    "grunt-contrib-watch" : "^0.6.1"
+    "grunt-contrib-uglify": "~0.2.5",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-copy-to": "0.0.10",
+    "grunt-notify": "~0.2.16",
+    "grunt-phpcs": "~0.2.1",
+    "grunt-rm": "0.0.4",
+    "grunt-sass": "~1.2.0",
+    "matchdep": "~0.1.2"
+  },
+  "description": "This is a basic theme that can be used to get started with rapid Wordpress theme development.",
+  "main": "js/main.js",
+  "repository": "https://github.com/melmo/shwib",
+  "author": "Melanie Thewlis",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "bootstrap": "4.1.1"
+  },
+  "engines": {
+    "yarn": ">= 1.0.0"
   }
 }

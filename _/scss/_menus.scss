@@ -13,7 +13,7 @@
 
 
 .navbar-general {
-	background:$gray-light;
+	background:$gray-300;
 	border-bottom:1px solid white;
 	border-radius:0;
 	.btn-secondary {
@@ -32,7 +32,7 @@
 
 
 .navbar-main-menu {
-	background:$gray-dark;
+	background:$gray-700;
 	font-size:14px;	
 
 }
@@ -63,7 +63,7 @@
 			margin-left:0;
 		}
 		.dropdown-menu {
-			background:$gray-dark;		
+			background:$gray-600;		
 			font-weight:400;
 			font-size:14px;
 			border-radius:0;

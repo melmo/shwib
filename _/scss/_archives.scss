@@ -11,13 +11,13 @@
 
 .entry-byline {
     margin-bottom: .75rem;
-    border-bottom: 1px solid $gray-light;
+    border-bottom: 1px solid $gray-300;
     font-size: .875rem;
 }
 
 .loop-meta {
 	margin-bottom: 1.5rem;
-    border-bottom: 1px solid $gray;
+    border-bottom: 1px solid $gray-500;
 }
 
 .entry-footer {
@@ -42,23 +42,23 @@
 	.page-numbers {
 		@extend .page-link;
 		&:active,&:hover,&:focus {
-			background:$gray-light;
+			background:$gray-300;
 			color: white;
 		}
 	}
 	.current {
-		background:$gray-dark;
+		background:$gray-600;
 		color: white;
 		&:active,&:hover,&:focus {
-			background:$gray-dark;
+			background:$gray-600;
 			color: white;
 		}
 	}
 	.dots {
 		background: white;
-		color: $gray;
+		color: $gray-500;
 		&:active,&:hover,&:focus {
-			color:$gray;
+			color:$gray-500;
 			background: white;
 		}
 	}

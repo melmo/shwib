@@ -7,20 +7,12 @@ Wordpress
 I
 Bootstrap
 
-Current versions:
-Hybrid 2.0.4
-Bootstrap Sass 3.3.3
-
 
 This is a basic theme that can be used to get started with rapid Wordpress theme development.
 
-It incorporates the Hybrid Core framework (http://themehybrid.com/hybrid-core) with Bootstrap Sass (https://github.com/twbs/bootstrap-sass).
+It incorporates the Hybrid Core framework (https://themehybrid.com/hybrid-core) with Bootstrap Sass (https://github.com/twbs/bootstrap-sass).
 
-Compile your Sass by opening your console/terminal, navigating to "shwib/_" and running "compass watch"
-
-Edit Bootstrap variables in "shwib/_/sass/bootstrap/_variables.scss"
-
-Replace "shwib/_/img/logo.png" with your fallback image for Facebook sharing
+Documentation and feedback form is at https://shwib.littlewebgiants.com
 
 Includes:
 - Basic Wordpress image styles
@@ -29,19 +21,8 @@ Includes:
 - Simple drop down menu
 - Basic comments styles
 - Facebook open graph and Twitter cards mark up
-- Favicon and app icons markup (see http://littlewebgiants.com/favicon-and-app-icon-template/ for how to generate all the images)
+- Favicon and app icons markup (see https://littlewebgiants.com/favicon-and-app-icon-template/ for how to generate all the images)
 - Sticky footer
 - Plus a bunch of other goodies from the Hybrid Core framework
 
 Enjoy :)
-
-
-Using grunt
-adding things to npm
-adding things to grunt
-where is the css (how to get line number info from sass compilation??)
-where is the javascript
-menus & sidebars
-custom post types
-theme settings
-social sharing, logos etc

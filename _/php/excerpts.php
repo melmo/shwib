@@ -47,7 +47,7 @@ function shwib_description() {
 	$description = '';
 
 	if ( is_home() ) {
-		$description = "Latest news on the solar energy and photovoltaics industry in the USA: installations, manufacturing, markets & policy, and technology.";
+		$description = "<?php get_bloginfo('description');?>";
 	}
 
 	elseif ( is_singular() ) {

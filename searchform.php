@@ -6,7 +6,7 @@
  *
  */
 ?>
-<div class="search">
+<div class="search-wrap">
 
 	<form method="get" class="search-form" action="<?php echo trailingslashit( home_url() ); ?>">
 	<div>

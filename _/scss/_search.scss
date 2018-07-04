@@ -70,7 +70,7 @@
 }
 
 @include media-breakpoint-down(xs) {
-	.search {
+	.search-wrap {
 		text-align:right;
 		.search-text {
 			max-width:none;

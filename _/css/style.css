@@ -7067,9 +7067,9 @@ img {
     text-align: right; } }
 
 @media (max-width: 575.98px) {
-  .search {
+  .search-wrap {
     text-align: right; }
-    .search .search-text {
+    .search-wrap .search-text {
       max-width: none;
       margin-right: 0px;
       margin-bottom: 10px; } }

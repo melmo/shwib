@@ -56,7 +56,7 @@ function shwib_description() {
 			$description = get_bloginfo( 'description' );
 
 		elseif ( empty( $description ) )
-			$description = get_the_excerpt($wp_query->post->ID);
+			$description = apply_filters('the_excerpt', get_post_field('post_excerpt', $wp_query->post->ID));
 	}
 
 	elseif ( is_archive() ) {

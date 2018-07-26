@@ -21,11 +21,9 @@
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
-        <nav class="navbar navbar-dark navbar-general">
+        <nav class="navbar navbar-dark bg-secondary navbar-general">
             <div class="container">
-                <button class="navbar-toggler hidden-md-up pull-xs-right" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
-                    &#9776;
-                </button>
+                
 
                 <a class="navbar-brand" href="<?php bloginfo('url');?>" title="<?php bloginfo('name');?> - <?php bloginfo('description');?>">
                     <?php if (is_home()) { ?>
@@ -33,14 +31,19 @@
                     <?php } ?>
                     <img class="main-logo" src="<?php bloginfo('template_url');?>/_/img/logo.png" alt="<?php bloginfo('name');?>" title="<?php bloginfo('name');?>">
                 </a>
-                <div class="pull-xs-right">
-                    <div class="navbar-social pull-xs-right hidden-sm-down">
+
+                <button class="navbar-toggler d-md-none" type="button" data-toggle="collapse" data-target="#main-menu">
+                    &#9776;
+                </button>
+
+                <div class="float-right">
+                    <div class="navbar-social float-right d-none d-md-block">
                         <a href="https://twitter.com/littlewebgiants" target="_blank" class="twitter-link"><i class="icon icon-twitter"></i></a>
                         <a href="https://www.facebook.com/littlewebgiants" target="_blank" class="facebook-link"><i class="icon icon-facebook"></i></a>
                         <a href="https://www.linkedin.com/company/little-web-giants" target="_blank" class="linkedin-link"><i class="icon icon-linkedin"></i></a>
                     </div>
-                    <a href="<?php bloginfo('url');?>/wp-login.php" class="login btn btn-nav hidden-sm-down "><i class="material-icons">&#xE7FD;</i></a>
-                    <div id="search-toggle" class="search btn btn-nav hidden-sm-down">
+                    <a href="<?php bloginfo('url');?>/wp-login.php" class="login btn btn-nav d-none d-md-block float-right"><i class="material-icons">&#xE7FD;</i></a>
+                    <div id="search-toggle" class="search btn btn-nav d-none d-md-block float-right">
                         <div class="navbar-search">
                             <?php get_template_part('searchform'); ?>
                         </div>
@@ -51,17 +54,19 @@
                 </div>  
             </div>
         </nav>
-        <nav class="navbar navbar-dark navbar-main-menu collapse navbar-toggleable-sm" id="exCollapsingNavbar2">
-            <div class="container">
-                <div class="nav-wrap clearfix" >
-                    <div class="hidden-md-up navbar-mobile-search">
-                        <?php get_template_part('searchform'); ?>
-                        <i class="material-icons" id="mobile-search-submit">&#xE8B6;</i>
+        <div class="navbar-collapse collapse navbar-expand-md d-md-block" id="main-menu">
+            <nav class="navbar navbar-dark navbar-main-menu " >
+                <div class="container">
+                    <div class="nav-wrap clearfix" >
+                        <div class="d-md-none navbar-mobile-search">
+                            <?php get_template_part('searchform'); ?>
+                            <i class="material-icons" id="mobile-search-submit">&#xE8B6;</i>
+                        </div>
+                        <?php get_template_part( 'menus/menu-primary' ); ?>
+                        
                     </div>
-                    <?php get_template_part( 'menus/menu-primary' ); ?>
-                    
-                </div><!--/.nav-collapse -->
-            </div>
-        </nav>
+                </div>
+            </nav>
+        </div><!--/.nav-collapse -->
         <div id="main">
 

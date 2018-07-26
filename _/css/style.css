@@ -6869,7 +6869,7 @@ img {
   .navbar-general .navbar-toggler {
     color: white;
     outline: none;
-    margin-right: -15px; }
+    margin-left: auto; }
   .navbar-general a.login i {
     padding-top: 5px; }
 
@@ -6982,8 +6982,7 @@ img {
     -webkit-font-smoothing: antialiased; }
   .navbar-main-menu .nav-wrap {
     padding: 0;
-    margin-left: -0.9375rem;
-    margin-right: -0.9375rem; }
+    width: 100%; }
     .navbar-main-menu .nav-wrap li.menu-item {
       border-top: 1px solid #2786af;
       padding: 0 0.9375rem; }

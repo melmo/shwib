@@ -22,7 +22,7 @@
 	.navbar-toggler {
 		color: white;
 		outline:none;
-		margin-right:-15px;
+		margin-left:auto;
 	}
 
 	a.login i {
@@ -197,8 +197,7 @@
 
 		.nav-wrap {
 			padding:0;
-			margin-left:-0.9375rem;
-			margin-right:-0.9375rem;
+			width:100%;
 		
 			li.menu-item {
 				border-top: 1px solid #2786af;
